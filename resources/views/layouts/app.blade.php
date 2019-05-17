@@ -15,6 +15,7 @@
 
 <body>
   <div id="app" class="{{ route_class() }}-page">
+  
   <!-- Page Wrapper -->
   	<div id="wrapper">
 
@@ -24,14 +25,17 @@
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
         @include('layouts._header')
+        
         @yield('content')
+        
         @include('layouts._footer')
         </div>
     <!-- End of Content Wrapper -->
+    
   	</div>
-  </div>
   <!-- End of Page Wrapper -->
   
+  </div>
   
 
   <!-- Scripts -->
