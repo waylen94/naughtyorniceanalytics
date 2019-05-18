@@ -3,11 +3,11 @@
 	<div class="row">
 		<!-- card -->
 		<div class="col-xl-4 col-lg-5">
-		@include('analytics.card')
-		@include('analytics.card')
-		@include('analytics.card')
-		@include('analytics.card')
-		@include('analytics.card')
+		@include('analytics.card_no')
+		@include('analytics.card_no')
+		@include('analytics.card_no')
+		@include('analytics.card_no')
+		@include('analytics.card_performance')
 
 		</div>
 		 <!-- Area Chart -->

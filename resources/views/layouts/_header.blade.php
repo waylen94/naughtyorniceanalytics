@@ -1,5 +1,7 @@
 <!-- Topbar -->
-<h1>Header</h1>
+<div class="container header-head">
+	<h1>DashBoard</h1>
 <!-- Divider -->
-      <hr class="sidebar-divider my-0">
+      <hr class="header-divider my-0">
+      </div>
 <!-- End of Topbar -->

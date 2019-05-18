@@ -1,4 +1,4 @@
-<div class="card border-left-primary shadow h-15 py-2">
+<div class="card shadow" id = "card-no">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
