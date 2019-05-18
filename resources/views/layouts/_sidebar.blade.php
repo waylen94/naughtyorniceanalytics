@@ -23,10 +23,6 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Interface
-      </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
@@ -51,13 +47,7 @@
         </div>
       </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        News
-      </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
