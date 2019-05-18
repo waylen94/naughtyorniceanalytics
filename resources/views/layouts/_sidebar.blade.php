@@ -69,9 +69,18 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Contact</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseContact" aria-expanded="true" aria-controls="collapseContact">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Contact</span>
+        </a>
+        <div id="collapseContact" class="collapse" aria-labelledby="headingContact" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Option</h6>
+            <a class="collapse-item" href="utilities-color.html">Support</a>
+            <a class="collapse-item" href="utilities-border.html">About us</a>
+            <a class="collapse-item" href="utilities-border.html">Contact</a>
+          </div>
+        </div>
       </li>
 
       <!-- Nav Item - Tables -->
