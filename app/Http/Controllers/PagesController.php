@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    public function root()
+    public function show()
     {
-        return view('pages.root');
+        return view('pages.welcome');
+    }
+    public function dashboard()
+    {
+        return view('pages.dashboard');
     }
 }
