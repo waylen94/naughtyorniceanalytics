@@ -13,4 +13,4 @@
 
 Route::get('/', 'PagesController@root')->name('root');//homepage
 
-Route::get('testingtable', 'TestingController@showtable')->name('testing.table');
+Route::get('testingtable', 'TestingController@showTable')->name('testing.table'); //testing table
