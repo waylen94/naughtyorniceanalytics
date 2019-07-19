@@ -14,6 +14,7 @@ class CreateHotelsTable extends Migration
             $table->integer('room_number')->unsigned();
             $table->string('description')->nullable();
             $table->string('location')->index();
+            $table->integer('user_id')->index();
             $table->timestamps();
         });
 	}
