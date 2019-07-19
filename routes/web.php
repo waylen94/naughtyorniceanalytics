@@ -11,15 +11,9 @@
 |
 */
 // homepage
-
 Route::get('/', 'PagesController@show')->name('homepage');//dashboard
-
-
 Route::get('/dashboard', 'PagesController@dashboard')->name('dashboard');//dashboard
-
 Route::get('testingtable', 'TestingController@showTable')->name('testing.table'); //testing table
-
-
 
 // authentication routers
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -42,3 +36,7 @@ Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('ver
 Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('hotels', 'HotelsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+
