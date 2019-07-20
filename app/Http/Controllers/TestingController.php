@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
+use App\Models\Platewaste;
 
 class TestingController extends Controller
 {
     public function showTable()
     {
-        return view('testing.table');   
+        $platewastes = Platewaste::paginate(20);
+        return view('testing.table',compact('platewastes'));   
     }
 }

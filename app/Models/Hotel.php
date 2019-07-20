@@ -11,4 +11,8 @@ class Hotel extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function platewaste(){
+        
+        return $this->hasMany(Platewaste::class);
+    }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePlatewasteTable extends Migration
+class CreatePlatewastesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePlatewasteTable extends Migration
      */
     public function up()
     {
-        Schema::create('platewaste', function (Blueprint $table) {
+        Schema::create('platewastes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamp('date')->nullable();
             $table->integer('hotel_id')->index();
@@ -31,6 +31,6 @@ class CreatePlatewasteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('platewaste');
+        Schema::dropIfExists('platewastes');
     }
 }
