@@ -21,7 +21,6 @@
 
               </tr>
             </thead>
-
             <tbody>
               @foreach($platewastes as $platewaste)
               <tr>
