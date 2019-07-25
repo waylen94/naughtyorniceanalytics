@@ -26,7 +26,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('benchmark')}}">
           <i class="fas fa-fw fa-cog"></i>
           <span>Benchmark</span>
         </a>
@@ -34,7 +34,7 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="{{route('analytics')}}" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Analytics</span>
         </a>
@@ -51,7 +51,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="{{route('news')}}">
           <i class="fas fa-fw fa-folder"></i>
           <span>News & Tips</span>
         </a>
@@ -59,7 +59,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseContact" aria-expanded="true" aria-controls="collapseContact">
+        <a class="nav-link collapsed" href="{{route('contact')}}" data-toggle="collapse" data-target="#collapseContact" aria-expanded="true" aria-controls="collapseContact">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Contact</span>
         </a>
@@ -75,7 +75,7 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('account')}}">
           <i class="fas fa-fw fa-table"></i>
           <span>Account</span></a>
       </li>

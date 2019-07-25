@@ -13,6 +13,12 @@
 // homepage
 Route::get('/', 'PagesController@show')->name('homepage');//dashboard
 Route::get('/dashboard', 'PagesController@dashboard')->name('dashboard');//dashboard
+Route::get('/account', 'PagesController@account')->name('account');//account
+Route::get('/analytics', 'PagesController@analytics')->name('analytics');//analytics
+Route::get('/contact', 'PagesController@contact')->name('contact');//contact
+Route::get('/news', 'PagesController@news')->name('news');//news
+Route::get('/benchmark', 'PagesController@benchmark')->name('benchmark');//news
+
 Route::get('testingtable', 'TestingController@showTable')->name('testing.table'); //testing table
 
 // authentication routers
