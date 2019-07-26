@@ -34,17 +34,10 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('analytics')}}" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="{{route('analytics')}}" >
           <i class="fas fa-fw fa-wrench"></i>
           <span>Analytics</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Option</h6>
-            <a class="collapse-item" href="utilities-color.html">History</a>
-            <a class="collapse-item" href="utilities-border.html">Compare</a>
-          </div>
-        </div>
+        </a>      
       </li>
 
 
@@ -59,18 +52,11 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('contact')}}" data-toggle="collapse" data-target="#collapseContact" aria-expanded="true" aria-controls="collapseContact">
+        <a class="nav-link collapsed" href="{{route('contact')}}">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Contact</span>
         </a>
-        <div id="collapseContact" class="collapse" aria-labelledby="headingContact" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Option</h6>
-            <a class="collapse-item" href="utilities-color.html">Support</a>
-            <a class="collapse-item" href="utilities-border.html">About us</a>
-            <a class="collapse-item" href="utilities-border.html">Contact</a>
-          </div>
-        </div>
+     
       </li>
 
       <!-- Nav Item - Tables -->
