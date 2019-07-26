@@ -75,9 +75,22 @@
       <hr class="sidebar-divider d-none d-md-block">
 
       <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
+<!--       <div class="text-center d-none d-md-inline"> -->
+<!--         <button class="rounded-circle border-0" id="sidebarToggle"></button> -->
+<!--       </div> -->
+		@if (Route::has('login'))
+                <li class="nav-item">
+                    @auth
+                        <a class = "nav-link" href="{{ url('/') }}">Home</a>
+                    @else
+                        <a class = "nav-link" href="{{ route('login') }}">Login</a>
 
+                        @if (Route::has('register'))
+                            <a class = "nav-link" href="{{ route('register') }}">Register</a>
+                        @endif
+                    @endauth
+                    <li>
+            @endif
+	
     </ul>
     <!-- End of Sidebar -->
