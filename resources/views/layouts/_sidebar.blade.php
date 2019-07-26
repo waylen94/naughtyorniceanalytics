@@ -61,7 +61,11 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
+      @auth
+        <a class="nav-link" href="{{route('users.show', Auth::id())}}">
+        @else
         <a class="nav-link" href="{{route('account')}}">
+        @endauth
           <i class="fas fa-fw fa-table"></i>
           <span>Account</span></a>
       </li>
@@ -82,6 +86,12 @@
                 <li class="nav-item">
                     @auth
                         <a class = "nav-link" href="{{ url('/') }}">Home</a>
+                                      <a class="dropdown-item" id="logout" href="#">
+                <form action="{{ route('logout') }}" method="POST">
+                  {{ csrf_field() }}
+                  <button class="btn btn-block btn-danger" type="submit" name="button">Logout</button>
+                </form>
+              </a>
                     @else
                         <a class = "nav-link" href="{{ route('login') }}">Login</a>
 
