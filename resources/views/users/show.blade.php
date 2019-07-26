@@ -3,7 +3,7 @@
 @section('title', $user->name . ' User Account')
 
 @section('content')
-
+<div class="container-fluid">
 <div class="row">
 
   <div class="col-lg-3 col-md-3 hidden-sm hidden-xs user-info">
@@ -32,7 +32,12 @@
         there is no more statistics ~_~
       </div>
     </div>
+    
+    <div>
+    <a class="btn btn-block" href="{{ route('users.edit', Auth::id()) }}">Modification</a>
+    </div>
 
   </div>
+</div>
 </div>
 @stop
