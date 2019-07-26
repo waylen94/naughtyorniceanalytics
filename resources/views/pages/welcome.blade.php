@@ -8,7 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+		
         <!-- Styles -->
         <style>
             html, body {
@@ -81,7 +81,7 @@
                     @endauth
                 </div>
             @endif
-
+			@include('shared._messages')
             <div class="content">
                 <div class="title m-b-md">
                     NaughtyorNice
