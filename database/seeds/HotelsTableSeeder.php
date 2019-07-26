@@ -12,7 +12,7 @@ class HotelsTableSeeder extends Seeder
         $hotels = factory(Hotel::class)->times(5)->make()
                                         ->each(function ($hotel) use ($faker, $user_ids) {
                                             
-            $hotel->user_id = $faker->randomElement($user_ids);
+            $hotel->user_id = $faker->unique()->randomElement($user_ids);
         });
 
         Hotel::insert($hotels->toArray());
