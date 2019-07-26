@@ -49449,19 +49449,21 @@ if (document.getElementById('dashboard-trending-canvas')) {
         label: 'Plate Waste/Gram',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)'
-      }] //    		options: {
-      //    	        elements: {
-      //    	            line: {
-      //    	                tension: 0 // disables bezier curves
-      //    	            }
-      //    	        }
-      //  	    }
-
+      }]
     }
   });
 }
 
-; //event driven
+;
+var json_data_testing_table = []; //store the json data array
+
+$.ajax({
+  url: '../uploads/Json/fake_testing_date_benchmark.json',
+  async: false,
+  success: function success(data) {
+    json_data_testing_table = data;
+  }
+}); //event driven
 
 if (document.getElementById("testing_button")) {
   document.getElementById("testing_button").onclick = loadDoc;
