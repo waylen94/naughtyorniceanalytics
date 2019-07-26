@@ -81,7 +81,6 @@
                     @endauth
                 </div>
             @endif
-			@include('shared._messages')
             <div class="content">
                 <div class="title m-b-md">
                     NaughtyorNice

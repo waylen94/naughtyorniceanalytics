@@ -26,7 +26,7 @@
         <div id="content-wrapper" class="d-flex flex-column">
         @include('layouts._header')
         
-        @include('shared._messages')
+        
         
         @yield('content')
         
