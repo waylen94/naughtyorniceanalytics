@@ -12,7 +12,10 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+/*                 background-image: url("img/buffet_background.jpg"); */
+                background:url("img/buffet_background.jpg");
+                background-repeat: no-repeat; /* Do not repeat the image */
+                background-size: cover; /* Resize the background image to cover the entire container */
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
