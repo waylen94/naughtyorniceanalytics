@@ -65,3 +65,9 @@
 		</div>
 	</div>
 </div>
+
+@section('script')
+<script>
+    var app = <?php echo json_encode($array); ?>;
+</script>
+@end
