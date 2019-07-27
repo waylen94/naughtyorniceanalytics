@@ -25,23 +25,23 @@ var chart_line_testing = new Chart(ctx, {
 });
 };
 
-var json_data_testing_table = [];//store the json data array
-$.ajax({
-    url: '../uploads/Json/fake_testing_date_benchmark.json',
-    async: false,
-    success: function (data) {
-    	json_data_testing_table = data;
-    }
-});
+//var json_data_testing_table = [];//store the json data array
+//$.ajax({
+//    url: '../uploads/Json/fake_testing_date_benchmark.json',
+//    async: false,
+//    success: function (data) {
+//    	json_data_testing_table = data;
+//    }
+//});
 
 //event driven
-if(document.getElementById("testing_button")){
-document.getElementById("testing_button").onclick = loadDoc;
-}
-function loadDoc(){
-	for (i = 1; i < 13; i++) { 
-		chart_line_testing.data.labels[i-1] = document.getElementById("horizen_"+i).value;
-		chart_line_testing.data.datasets[0].data[i-1] = Number(document.getElementById("point_"+i).value);
-		  }
-	chart_line_testing.update();
-};
+//if(document.getElementById("testing_button")){
+//document.getElementById("testing_button").onclick = loadDoc;
+//}
+//function loadDoc(){
+//	for (i = 1; i < 13; i++) { 
+//		chart_line_testing.data.labels[i-1] = document.getElementById("horizen_"+i).value;
+//		chart_line_testing.data.datasets[0].data[i-1] = Number(document.getElementById("point_"+i).value);
+//		  }
+//	chart_line_testing.update();
+//};
