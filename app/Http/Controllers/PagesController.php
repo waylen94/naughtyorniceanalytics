@@ -2,36 +2,47 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['show']]);
+    }
     public function show()
     {
         return view('pages.welcome');
     }
-    public function dashboard()
+    
+    
+    public function dashboard(User $user)
     {
-        return view('pages.dashboard');
+        $hotel = $user->Hotel()->getRelated();
+        $platewaste = $hotel->platewaste();
+        
+        
+        return view('pages.dashboard', compact('platewaste'));
     }
-    public function account()
+    public function account(User $user)
     {
-        return view('pages.Account');
+        return view('pages.Account', compact('user'));
     }
-    public function analytics()
+    public function analytics(User $user)
     {
-        return view('pages.Analytics');
+        return view('pages.Analytics', compact('user'));
     }
-    public function contact()
+    public function contact(User $user)
     {
-        return view('pages.Contact');
+        return view('pages.Contact', compact('user'));
     }
-    public function news()
+    public function news(User $user)
     {
-        return view('pages.News&Tips');
+        return view('pages.News&Tips', compact('user'));
     }
-    public function benchmark()
+    public function benchmark(User $user)
     {
-        return view('pages.Benchmark');
+        return view('pages.Benchmark', compact('user'));
     }
 }

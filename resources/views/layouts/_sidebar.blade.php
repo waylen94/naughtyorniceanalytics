@@ -12,10 +12,10 @@
       <hr class="sidebar-divider my-0">
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
-
+@auth
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="{{ route('dashboard') }}">
+        <a class="nav-link" href="{{ route('dashboard', Auth::id()) }}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -26,7 +26,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="{{route('benchmark')}}">
+        <a class="nav-link" href="{{route('benchmark', Auth::id())}}">
           <i class="fas fa-fw fa-cog"></i>
           <span>Benchmark</span>
         </a>
@@ -34,7 +34,7 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('analytics')}}" >
+        <a class="nav-link collapsed" href="{{route('analytics', Auth::id())}}" >
           <i class="fas fa-fw fa-wrench"></i>
           <span>Analytics</span>
         </a>      
@@ -44,7 +44,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="{{route('news')}}">
+        <a class="nav-link" href="{{route('news', Auth::id())}}">
           <i class="fas fa-fw fa-folder"></i>
           <span>News & Tips</span>
         </a>
@@ -52,7 +52,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('contact')}}">
+        <a class="nav-link collapsed" href="{{route('contact', Auth::id())}}">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Contact</span>
         </a>
@@ -64,17 +64,18 @@
       @auth
         <a class="nav-link" href="{{route('users.show', Auth::id())}}">
         @else
-        <a class="nav-link" href="{{route('account')}}">
+        <a class="nav-link" href="{{route('account', Auth::id())}}">
         @endauth
           <i class="fas fa-fw fa-table"></i>
           <span>Account</span></a>
       </li>
+      @endauth
       <li class="nav-item">
         <a class="nav-link" href="{{ route('testing.table') }}">
           <i class="fas fa-fw fa-table"></i>
           <span>Testing fake statistics</span></a>
       </li>
-
+		
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 

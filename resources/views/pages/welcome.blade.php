@@ -85,11 +85,17 @@
                 <div class="title m-b-md">
                     NaughtyorNice
                 </div>
-
+@auth
                 <div class="links">
-                    <a href="{{ route('dashboard') }}">Dashboard</a>
+                    <a href="{{ route('dashboard', Auth::id()) }}">Dashboard</a>
                    
                 </div>
+                @else
+                <div class="links">
+                    <a>Welcome to Naughty or nice, Please login first</a>
+                   
+                </div>
+                @endauth
             </div>
         </div>
     </body>
