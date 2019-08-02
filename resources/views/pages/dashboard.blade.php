@@ -4,4 +4,7 @@
 
 @section('content')
   @include('analytics.dashboard')
+@section('script')
+
+@stop
 @stop

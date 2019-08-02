@@ -64,6 +64,106 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            
+            // orange-circle-button
+
+            .orange-circle-button {
+            	box-shadow: 2px 4px 0 2px rgba(0,0,0,0.1);
+            	border: .5em solid #E84D0E;
+            	font-size: 2em;
+            	line-height: 1.1em;
+            	color: #ffffff;
+            	background-color: rgb(232, 113, 15);
+            	margin: auto;
+            	border-radius: 50%;
+            	height: 7em;
+            	width: 7em;
+            	position: relative;
+            }
+            .orange-circle-button:hover {
+            	color:#ffffff;
+                background-color: rgb(232, 113, 15);
+            	text-decoration: none;
+            	border-color: #ff7536;
+            	
+            }
+                .orange-circle-button:visited {
+                	color:#ffffff;
+                    background-color: rgb(232, 113, 15);
+                	text-decoration: none;
+                	
+                }
+                .orange-circle-link-greater-than {
+                    font-size: 1em;
+                }
+
+                /* Prevent scrollbars to appear when waves go out of bound */
+                .sonar-wrapper {
+                  position: relative;
+                  z-index: 0;
+                  overflow: hidden;
+                  padding: 8rem 0;
+                  height: 100%;
+                }
+
+                /* The circle */
+                .sonar-emitter {
+                  position: relative;
+                  margin:auto;
+                  width: 275px;
+                  height: 275px;
+                  border-radius: 9999px;
+                  background-color: HSL(45,100%,50%);
+                }
+
+                /* the 'wave', same shape and size as its parent */
+                .sonar-wave {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 9999px;
+                  background-color: HSL(45,100%,50%);
+                  opacity: 0;
+                  z-index: -1;
+                  pointer-events: none;
+                }
+
+                /*
+                  Animate!
+                  NOTE: add browser prefixes where needed.
+                */
+                .sonar-wave {
+                  animation: sonarWave 2s linear infinite;
+                }
+                
+                @keyframes sonarWave {
+                  from {
+                    opacity: 0.4;
+                  }
+                  to {
+                    transform: scale(3);
+                    opacity: 0;
+                  }
+                }
+                
+                .col-center-block {
+                    float: none;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                
+                .title{
+                margin-top: 60px;
+                }
+                
+                .btn-primary{
+                    font-size: 30px;
+                }
+
+
         </style>
     </head>
     <body>
@@ -87,7 +187,15 @@
                 </div>
 @auth
                 <div class="links">
-                    <a href="{{ route('dashboard', Auth::id()) }}">Dashboard</a>
+<!--                     <a href="{{ route('dashboard', Auth::id()) }}">Dashboard</a> -->
+                    
+                    		<div class="row sonar-wrapper">
+		<button type ="button" class="sonar-emitter text-center text-white mt-0 btn-lg orange-circle-button btn btn-primary " onclick="window.location.href='{{ route('dashboard', Auth::id()) }}'" > Naughty <br />or <br />Nice
+		<div class="sonar-wave"></div>
+		</button>
+		
+		
+		</div>
                    
                 </div>
                 @else

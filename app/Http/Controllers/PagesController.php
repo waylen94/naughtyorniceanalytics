@@ -19,11 +19,11 @@ class PagesController extends Controller
     
     public function dashboard(User $user)
     {
-        $hotel = $user->Hotel()->getRelated();
-        $platewaste = $hotel->platewaste();
+//         $hotel = $user->Hotel()->getRelated();
+//         $platewastes = $hotel->pageinate(5);
         
         
-        return view('pages.dashboard', compact('platewaste'));
+        return view('pages.dashboard',compact('user'));
     }
     public function account(User $user)
     {
