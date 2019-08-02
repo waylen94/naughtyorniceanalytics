@@ -5,10 +5,10 @@
 @section('content')
   @include('common.building')
   <div class ="container">
-    <h1>Responsible Person:<h1>
-  <h2>Front-end: <h2>
+    <h1>Responsible Person: Will<h1>
+  <h2>Front-end: Will<h2>
   <h2>Back-end:  <h2>
-  <h2>expected accomplishment date: <h2>
+  <h2>expected accomplishment date: Week 6 <h2>
   
                 <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->

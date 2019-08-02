@@ -6,10 +6,10 @@
 @section('content')
   @include('common.building')
   <div class ="container">
-    <h1>Responsible Person:<h1>
+    <h1>Responsible Person: Weilun Liu<h1>
   <h2>Front-end: <h2>
   <h2>Back-end:  <h2>
-  <h2>expected accomplishment date: <h2>
+  <h2>expected accomplishment date: Week 4<h2>
                         <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
