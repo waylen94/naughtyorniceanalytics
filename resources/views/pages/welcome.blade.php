@@ -49,7 +49,7 @@
                background-position: center;
                background-size: cover;
                background-repeat: no-repeat; /* Do not repeat the image */
-               height:100%;
+               
             }
             
        
