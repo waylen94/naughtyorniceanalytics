@@ -11,8 +11,8 @@
         <style>
         
         .homepage_container{
-float:left;
-width:100%;
+                float:left;
+                width:100%;
 
             
         }
@@ -20,7 +20,7 @@ width:100%;
                 background-repeat: no-repeat;
                 background-size: cover;
 /*                 background-position: center; */
-                height:100%;        
+                height:100%;      
          }
          .homepage-left h1{
             text-align: center;
@@ -36,13 +36,14 @@ width:100%;
             color:#060606;
             font-size: 1.1em;
           }
-          .homepage-btn{
-            margin-left:23%;
-          }
+
           .homepage-btn .first{
             margin-right:7%;
           }
           
+          .homepage_first_div_top{
+            text-align: center;
+          }
              
          .homepage_first_div_top{
             height:87vh;
@@ -71,11 +72,15 @@ width:100%;
               
             <h1>Naughty or Nice ?</h1>
             <p>Establish a daily benchamrk through statistics to keep track of your environmental performance.</p>
+            @auth
+            <a href="{{ route('dashboard', Auth::id()) }}" class="btn btn-success">How are your traveling</a>
+            @else
             <div class="homepage-btn">
                 <a href="{{ route('login') }}" class="btn btn-primary first">Get Started</a>
                 <a href="{{ route('register') }}" class="btn btn-primary ">Activate Account</a>
             
             </div>
+            @endauth
             </div> 
             
             <div class="footer">
