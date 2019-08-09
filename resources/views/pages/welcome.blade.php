@@ -11,6 +11,9 @@
         <style>
         
         .homepage_container{
+float:left;
+width:100%;
+
             
         }
         .homepage-left{
@@ -45,10 +48,11 @@
             height:87vh;
          }      
        .homepage-right {
-               background: url("img/bg_001.png");
+               background-image: url("img/bg_003.png");
                background-position: center;
-               background-size: cover;
+               background-size: 100% 110%;
                background-repeat: no-repeat; /* Do not repeat the image */
+
 
             }
             
@@ -58,7 +62,7 @@
     </head>
     <body>
             <!--  -->
-            <div class="container-fluid homepage_container">
+            <div class="container-fluid homepage_container bg-white">
             <div class="row">
             <!-- the First fragment -->
             
