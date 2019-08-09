@@ -24,9 +24,9 @@
          }
          .homepage-left h1{
             text-align: center;
-            margin-bottom:10%;
+            margin-bottom:7%;
             color:#000000;
-            padding-top: 15%;
+            padding-top: 9%;
             font-size: 7.5em;
          }   
          
