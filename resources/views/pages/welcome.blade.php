@@ -34,10 +34,10 @@
             font-size: 1.1em;
           }
           .homepage-btn{
-            margin-left:22%;
+            margin-left:23%;
           }
           .homepage-btn .first{
-            margin-right:5%;
+            margin-right:7%;
           }
           
              
@@ -49,7 +49,7 @@
                background-position: center;
                background-size: cover;
                background-repeat: no-repeat; /* Do not repeat the image */
-               
+
             }
             
        
@@ -58,7 +58,7 @@
     </head>
     <body>
             <!--  -->
-            <div class="container homepage_container">
+            <div class="container-fluid homepage_container">
             <div class="row">
             <!-- the First fragment -->
             
