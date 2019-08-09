@@ -590,3 +590,46 @@ body.sidebar-toggled footer.sticky-footer {
 
 
 /* Homepage */
+
+.homepage_container{
+                float:left;
+                width:100%;           
+
+	.homepage-left{
+		background-repeat: no-repeat;
+		background-size: cover;
+		height:100%;             
+		h1{
+		text-align: center;
+		margin-bottom:7%;
+		color:#000000;
+		padding-top: 9%;
+		font-size: 7.5em;
+		         }         
+		p{
+		text-align: center;
+		margin-bottom:7%;
+		color:#060606;
+		font-size: 1.1em;
+		}
+	
+	.homepage-btn{
+		.first{margin-right:7%;
+			}
+	}
+
+  
+	.homepage_first_div_top{
+	text-align: center;
+	height:87vh;
+          }
+	}  
+	.homepage-right {
+	background-image: url("../img/bg_003.png");
+	background-position: center;
+	background-size: 100% 110%;
+	background-repeat: no-repeat; /* Do not repeat the image */
+	        }
+            
+       
+}
