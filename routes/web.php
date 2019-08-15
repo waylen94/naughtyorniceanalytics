@@ -16,7 +16,7 @@ Route::get('/dashboard/{user}', 'PagesController@dashboard')->name('dashboard');
 Route::get('/account/{user}', 'PagesController@account')->name('account');//account
 Route::get('/analytics/{user}', 'PagesController@analytics')->name('analytics');//analytics
 Route::get('/contact/{user}', 'PagesController@contact')->name('contact');//contact
-Route::get('/news/{user}', 'PagesController@news')->name('news');//news
+Route::get('/newsshow/{user}', 'PagesController@news')->name('newsshow');//news
 Route::get('/benchmark/{user}', 'PagesController@benchmark')->name('benchmark');//news
 
 
@@ -51,5 +51,10 @@ Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit'
 // Route::get('/users/{user}', 'UsersController@show')->name('users.show');
 // Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
 // Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
+
+
+
+Route::resource('news', 'NewsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
 
 
