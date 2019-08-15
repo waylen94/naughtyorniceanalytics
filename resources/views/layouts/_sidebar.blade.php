@@ -44,7 +44,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="{{route('newsshow', Auth::id())}}">
+        <a class="nav-link" href="{{route('news.index')}}">
           <i class="fas fa-fw fa-folder"></i>
           <span>News & Tips</span>
         </a>

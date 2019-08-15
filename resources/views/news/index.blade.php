@@ -23,22 +23,22 @@
             </thead>
 
             <tbody>
-              @foreach($news as $news)
+              @foreach($news as $new)
               <tr>
-                <td class="text-xs-center"><strong>{{$news->id}}</strong></td>
+                <td class="text-xs-center"><strong>{{$new->id}}</strong></td>
 
-                <td>{{$news->title}}</td> <td>{{$news->body}}</td> <td>{{$news->user_id}}</td> <td>{{$news->view_count}}</td> <td>{{$news->order}}</td> <td>{{$news->excerpt}}</td> <td>{{$news->slug}}</td>
+                <td>{{$new->title}}</td> <td>{{$new->body}}</td> <td>{{$new->user_id}}</td> <td>{{$new->view_count}}</td> <td>{{$new->order}}</td> <td>{{$new->excerpt}}</td> <td>{{$new->slug}}</td>
 
                 <td class="text-xs-right">
-                  <a class="btn btn-sm btn-primary" href="{{ route('news.show', $news->id) }}">
+                  <a class="btn btn-sm btn-primary" href="{{ route('news.show', $new->id) }}">
                     V
                   </a>
 
-                  <a class="btn btn-sm btn-warning" href="{{ route('news.edit', $news->id) }}">
+                  <a class="btn btn-sm btn-warning" href="{{ route('news.edit', $new->id) }}">
                     E
                   </a>
 
-                  <form action="{{ route('news.destroy', $news->id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Delete? Are you sure?');">
+                  <form action="{{ route('news.destroy', $new->id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Delete? Are you sure?');">
                     {{csrf_field()}}
                     <input type="hidden" name="_method" value="DELETE">
 
