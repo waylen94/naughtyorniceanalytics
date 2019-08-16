@@ -5,8 +5,8 @@
 @section('content')
   @include('analytics.dashboard')
 @section('script')
-	<script>
-    var json_data_user_hotel_10days_trending = <?php echo json_encode($user->hotel->platewaste->toArray()); ?>;
-	</script>
+<!-- 	<script>  json encode not suit for massive transformation-->
+    
+<!-- 	</script> -->
 @stop
 @stop
