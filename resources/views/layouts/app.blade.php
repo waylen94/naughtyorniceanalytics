@@ -11,6 +11,8 @@
   <title>@yield('title', 'Analytics') - NaughtyorNice</title>
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+  
+   @yield('styles_editor')
 </head>
 
 <body>
@@ -44,6 +46,8 @@
   @yield('script')
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="{{ mix('js/app.js') }}"></script>
+  
+   @yield('scripts_editor')
 </body>
 
 </html>
