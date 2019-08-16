@@ -21,8 +21,6 @@ class PagesController extends Controller
     {
 //         $hotel = $user->Hotel()->getRelated();
 //         $platewastes = $hotel->pageinate(5);
-        
-        
         return view('pages.dashboard',compact('user'));
     }
     public function account(User $user)

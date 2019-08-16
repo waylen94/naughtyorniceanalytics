@@ -60,5 +60,9 @@ class UsersTableSeeder extends Seeder
         $user->name = 'Matthew D Souza';
         $user->email = 'm.dsouza@uq.edu.au';
         $user->save();
+        $user = User::find(8);
+        $user->name = 'Cheng-Yo Yu';
+        $user->email = 'chengyo.yu@uqconnect.edu.au';
+        $user->save();
     }
 }
