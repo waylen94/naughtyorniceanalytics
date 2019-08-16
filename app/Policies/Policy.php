@@ -2,6 +2,8 @@
 
 namespace App\Policies;
 
+use App\Models\News;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class Policy
@@ -18,5 +20,10 @@ class Policy
 	    // if ($user->isSuperAdmin()) {
 	    // 		return true;
 	    // }
+	}
+	
+	public function update(User $user, News $news)
+	{
+	    return $news->user_id == $user->id;
 	}
 }

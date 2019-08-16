@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 topic-content">
+    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 news-content">
       <div class="card ">
         <div class="news-body">
           <h1 class="text-center mt-3 mb-3">
@@ -38,19 +38,27 @@
 <!--             {{ $news->reply_count }} -->
           </div>
 
-          <div class="topic-body mt-4 mb-4">
+          <div class="news-body mt-4 mb-4">
             {!! $news->body !!}
           </div>
 
-          <div class="operate">
-            <hr>
-            <a href="{{ route('news.edit', $news->id) }}" class="btn btn-outline-secondary btn-sm" role="button">
-              <i class="far fa-edit"></i> Modify
-            </a>
-            <a href="#" class="btn btn-outline-secondary btn-sm" role="button">
-              <i class="far fa-trash-alt"></i> Delete
-            </a>
-          </div>
+@can('update', $news)
+            <div class="operate">
+              <hr>
+              <a href="{{ route('news.edit', $news->id) }}" class="btn btn-outline-secondary btn-sm" role="button">
+                <i class="far fa-edit"></i> Modify
+              </a>
+              <form action="{{ route('news.destroy', $news->id) }}" method="post"
+                    style="display: inline-block;"
+                    onsubmit="return confirm('Do you really mean to delete it ?');">
+                {{ csrf_field() }}
+                {{ method_field('DELETE') }}
+                <button type="submit" class="btn btn-outline-secondary btn-sm">
+                  <i class="far fa-trash-alt"></i> Delete
+                </button>
+              </form>
+            </div>
+          @endcan
 
         </div>
       </div>

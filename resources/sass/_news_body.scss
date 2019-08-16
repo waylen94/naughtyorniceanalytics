@@ -1,4 +1,4 @@
-.simditor-body, .topic-body {
+.simditor-body, .news-body {
   font-size: 15px;
   line-height: 1.3;
   overflow: hidden;
@@ -116,11 +116,11 @@
     overflow: auto;
   }
 
-  .topic-body>*:first-child {
+  .news-body>*:first-child {
     margin-top: 0 !important;
   }
 
-  .topic-body>*:last-child {
+  .news-body>*:last-child {
     margin-bottom: 0 !important;
   }
 
