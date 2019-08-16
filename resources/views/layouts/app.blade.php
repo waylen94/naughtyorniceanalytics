@@ -14,7 +14,6 @@
   
    @yield('styles_editor')
 </head>
-
 <body>
   <div id="app" class="{{ route_class() }}-page">
   
@@ -22,13 +21,9 @@
   	<div id="wrapper">
 
         @include('layouts._sidebar')
-    
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
         @include('layouts._header')
-        
-        
         
         @yield('content')
         

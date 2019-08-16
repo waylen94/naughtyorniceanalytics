@@ -27,6 +27,11 @@
             <label for="email-field">Email</label>
             <input class="form-control" type="text" name="email" id="email-field" value="{{ old('email', $user->email) }}" />
           </div>
+          
+          <div class="form-group">
+            <label for="introduction-field">Introduction</label>
+            <textarea name="introduction" id="introduction-field" class="form-control" rows="3">{{ old('introduction', $user->introduction) }}</textarea>
+          </div>
           <div class="well well-sm">
             <button type="submit" class="btn btn-primary">Save</button>
           </div>

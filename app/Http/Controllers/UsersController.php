@@ -21,6 +21,6 @@ class UsersController extends Controller
     public function update(UserRequest $request, User $user)
     {
         $user->update($request->all());
-        return redirect()->route('users.show', $user->id);
+        return redirect()->route('users.show', $user->id)->with('success', 'Personal data update successful！');
     }
 }
