@@ -10,17 +10,13 @@ class NewsRequest extends Request
         {
             // CREATE
             case 'POST':
-            {
-                return [
-                    // CREATE ROLES
-                ];
-            }
             // UPDATE
             case 'PUT':
             case 'PATCH':
             {
                 return [
-                    // UPDATE ROLES
+                    'title'       => 'required|min:2',
+                    'body'        => 'required|min:3',
                 ];
             }
             case 'GET':
@@ -35,7 +31,8 @@ class NewsRequest extends Request
     public function messages()
     {
         return [
-            // Validation messages
+            'title.min' => 'Title prefer 2 words',
+            'body.min' => 'Content body must over 3 words',
         ];
     }
 }
