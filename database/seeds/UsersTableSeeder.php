@@ -13,14 +13,23 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $faker = app(Faker\Generator::class);
+        $avatars = [
+            'https://cdn.learnku.com/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/600/h/600',
+        ];
         
-        $users = factory(User::class)->times(10)->make();
+        $users = factory(User::class)
+        ->times(10)
+        ->make()
+        ->each(function ($user, $index)
+            use ($faker, $avatars)
+            {
+                $user->avatar = $faker->randomElement($avatars);
+        });
         
         $user_array = $users->makeVisible(['password', 'remember_token'])->toArray();
         
         User::insert($user_array);
-        
-        
+      
         #dealing with the first account
         $user = User::find(1);
         $user->name = 'Sara Dolnicar';

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Handlers\ImageUploadHandler;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\NewsRequest;
 use App\Models\News;
@@ -60,4 +61,28 @@ class NewsController extends Controller
 
 		return redirect()->route('news.index')->with('message', 'Deleted successfully.');
 	}
+	
+	
+	public function uploadImage(Request $request, ImageUploadHandler $uploader)
+	{
+	    // initializing file uploading fialure
+	    $data = [
+	        'success'   => false,
+	        'msg'       => 'uplaoding failure!',
+	        'file_path' => ''
+	    ];
+	    // determine whether there is file uploading
+	    if ($file = $request->upload_file) {
+	        // store the image to server
+	        $result = $uploader->save($request->upload_file, 'topics', Auth::id(), 1024);
+	        // if image stored properly
+	        if ($result) {
+	            $data['file_path'] = $result['path'];
+	            $data['msg']       = "uploading success!";
+	            $data['success']   = true;
+	        }
+	    }
+	    return $data;
+	}
+
 }

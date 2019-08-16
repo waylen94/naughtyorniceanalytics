@@ -56,5 +56,5 @@ Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit'
 
 Route::resource('news', 'NewsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
-
+Route::post('upload_image', 'NewsController@uploadImage')->name('topics.upload_image');
 
