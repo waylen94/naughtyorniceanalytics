@@ -4,15 +4,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laravel</title>
 			<link href="{{ mix('css/app.css') }}" rel="stylesheet">
+			
+			
+			<style> 
+
+
+                </style>
     </head>
     <body>
             <!--  -->
             <div class="container-fluid homepage_container bg-white">
-                <div class="row">
+			<div class = "row">
                 <!-- the First fragment -->
-                       <div class="col homepage-left">
+                       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 homepage-left">
                             <div class="homepage_first_div_top">   
-                                <h1>Naughty or Nice ?</h1>
+                                <h1 class ="display-1">Naughty or Nice ?</h1>
                                 <p>Establish a daily benchamrk through statistics to keep track of your environmental performance.</p>
                                 @auth
                                 <a href="{{ route('dashboard', Auth::id()) }}" class="btn btn-success">How are your traveling</a>
@@ -27,10 +33,12 @@
                             @include('layouts._footer')
                             </div>
                       </div>
+                      
+                      
                   <!-- the second fragment -->
-               		<div class="col homepage-right">
+               		<div class="col-lg-6 col-md-6 hidden-sm hidden-xs homepage-right">
                		</div>
-           		 </div>
+               		</div>
 			</div>
-<script src="{{ mix('js/app.js') }}"></script>
+		<script src="{{ mix('js/app.js') }}"></script>
     </body>
