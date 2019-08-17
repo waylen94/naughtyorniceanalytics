@@ -18,17 +18,18 @@
                                                                             @endswitch</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">@switch($i)
                                                                                 @case(1)
-                                                                                    {{$platewaste->pluck('weight_kg')->sum()}}
+                                                                                    {{$platewaste->pluck('weight_kg')->sum()}} kg
                                                                                     @break
                                                                             
                                                                                 @case(2)
                                                                                     {{$platewaste->pluck('people')->sum()}}
-                                                                                    @break
+                                                                                    @break 
                                                                             	@case(3)
                                                                             	{{$platewaste->pluck('weight_kg')->sum()/$platewaste->pluck('people')->sum()}}
+                                                                            		kg
                                                                             		@break
                                                                             	@case(4)
-                                                                            		
+                                                                            		2 kg Less
                                                                             		@break
                                                                             @endswitch</div>
                     </div>
