@@ -3,10 +3,10 @@
 	<div class="row">
 		<!-- card -->
 		<div class="col-xl-4 col-lg-5">
-		@include('analytics.card_no')
-		@include('analytics.card_no')
-		@include('analytics.card_no')
-		@include('analytics.card_no')
+		@include('analytics.card_no',['i' => '1'])
+		@include('analytics.card_no',['i' => '2'])
+		@include('analytics.card_no',['i' => '3'])
+		@include('analytics.card_no',['i' => '4'])
 		@include('analytics.card_performance')
 
 		</div>

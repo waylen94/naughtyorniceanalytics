@@ -19,7 +19,8 @@ class PagesController extends Controller
     
     public function dashboard(User $user)
     {
-        return view('pages.Dashboard',compact('user'));
+        $platewaste = $user->Hotel->platewaste->take(10);
+        return view('pages.Dashboard',compact('user','platewaste'));
     }
     public function account(User $user)
     {
