@@ -49443,9 +49443,9 @@ if (document.getElementById('dashboard-trending-canvas')) {
     type: 'line',
     // The data for our dataset
     data: {
-      labels: ['08-May', '09-May', '10-May', '11-May', '12-May', '13-May', '14-May', '15-May', '16-May', '18-May'],
+      labels: json_data_benchmark_date,
       datasets: [{
-        data: [json_data[0].B, json_data[1].B, json_data[2].B, json_data[3].B, json_data[4].B, json_data[5].B, json_data[6].B, json_data[7].B, json_data[8].B, json_data[9].B],
+        data: json_data_benchmark_data,
         label: 'Plate Waste/Gram',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)'
