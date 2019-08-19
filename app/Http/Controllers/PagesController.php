@@ -28,7 +28,8 @@ class PagesController extends Controller
     }
     public function analytics(User $user)
     {
-        return view('pages.Analytics', compact('user'));
+        $platewaste = $user->Hotel->platewaste->take(10);
+        return view('pages.Analytics', compact('user','platewaste'));
     }
     public function contact(User $user)
     {

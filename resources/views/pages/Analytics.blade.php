@@ -65,3 +65,11 @@
               </div>
 </div>
 @stop
+
+@section("diagram_js_script")
+	<script>
+		var json_data_benchmark_date = ['08-May', '09-May', '10-May','11-May', '12-May','13-May', '14-May', '15-May', '16-May', '18-May'];
+		console.log(json_data_benchmark_date);
+		var json_data_benchmark_data =  {{ $platewaste->pluck('weight_kg')->toJson(JSON_PRETTY_PRINT) }} ;
+ 	</script>
+@stop
