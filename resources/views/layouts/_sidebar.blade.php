@@ -32,13 +32,6 @@
         </a>
       </li>
 
-      <!-- Nav Item - Utilities Collapse Menu -->
-<!--       <li class="nav-item"> -->
-<!--         <a class="nav-link collapsed" href="{{route('analytics', Auth::id())}}" > -->
-<!--           <i class="fas fa-fw fa-wrench"></i> -->
-<!--           <span>Analytics</span> -->
-<!--         </a>       -->
-<!--       </li> -->
 
 
 

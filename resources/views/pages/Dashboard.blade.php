@@ -20,6 +20,8 @@
 <!--             </div> -->
 <!--           </stats-card> -->
 <!--         </div> -->
+
+	<chart-card></chart-card>
     @section('script')
     @stop
 @stop

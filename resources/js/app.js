@@ -23,6 +23,13 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 Vue.component('stats-card', require('./components/statescard.vue').default);
 
+Vue.component('chart-card', require('./components/ChartCard.vue').default);
+
+Vue.component('benchmark-button', require('./components/BenchmarkButton.vue').default);
+
+
+
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
