@@ -63,7 +63,35 @@
               </div>
               </div>
               </div>
+              
+              
+       <div class = "row">
+       
+                      
+                      
+                      
+                      
+       </div>
 </div>
+@stop
+
+
+@section('styles_editor')
+<style>
+<!--
+
+-->
+
+
+</style>
+@stop
+
+@section('scripts_editor')
+
+<script>
+
+
+</script>
 @stop
 
 

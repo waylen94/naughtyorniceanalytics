@@ -18,7 +18,7 @@ class NewsController extends Controller
 
 	public function index()
 	{
-		$news = News::with("user")->paginate(10);
+		$news = News::with("user")->paginate(5);
 		return view('pages.news&tips', compact('news'));
 	}
 
@@ -32,10 +32,18 @@ class NewsController extends Controller
 		return view('news.create_and_edit', compact('news'));
 	}
 
-	public function store(NewsRequest $request, News $news)
+	public function store(NewsRequest $request, News $news, ImageUploadHandler $uploader)
 	{
-		$news->fill($request->all());
+	    
+	    $data = $request->all();
+		$news->fill($data);
 		$news->user_id = Auth::id();
+		if ($request->image) {
+		    $result = $uploader->save($request->image, 'image', $news->id);
+		    if ($result) {
+		        $data['avatar'] = $result['path'];
+		    }
+		}
 		$news->save();
 		return redirect()->route('news.show', $news->id)->with('message', 'Created successfully.');
 	}
@@ -46,11 +54,18 @@ class NewsController extends Controller
 		return view('news.create_and_edit', compact('news'));
 	}
 
-	public function update(NewsRequest $request, News $news)
+	public function update(NewsRequest $request, News $news, ImageUploadHandler $uploader)
 	{
 		$this->authorize('update', $news);
-		$news->update($request->all());
-
+		
+		$data = $request->all();
+		if ($request->image) {
+		    $result = $uploader->save($request->image, 'image', $news->id);
+		    if ($result) {
+		        $data['avatar'] = $result['path'];
+		    }
+		}
+		$news->update($data);
 		return redirect()->route('news.show', $news->id)->with('message', 'Updated successfully.');
 	}
 

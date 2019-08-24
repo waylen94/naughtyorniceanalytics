@@ -19,10 +19,10 @@
           <hr>
 
           @if($news->id)
-            <form action="{{ route('news.update', $news->id) }}" method="POST" accept-charset="UTF-8">
+            <form action="{{ route('news.update', $news->id) }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
               <input type="hidden" name="_method" value="PUT">
           @else
-            <form action="{{ route('news.store') }}" method="POST" accept-charset="UTF-8">
+            <form action="{{ route('news.store') }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
           @endif
 
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -36,6 +36,16 @@
               <div class="form-group">
                 <textarea name="body" class="form-control" id="editor" rows="6" placeholder="Please typing at least 3 words" required>{{ old('body', $news->body ) }}</textarea>
               </div>
+              
+          <div class="form-group mb-4">
+            <label for="" class="avatar-label">Gallery Image</label>
+            <input type="file" name="image" class="form-control-file">
+
+            @if($news->image)
+              <br>
+              <img class="thumbnail img-responsive" src="{{ $news->image }}" width="200" />
+            @endif
+          </div>
 
               <div class="well well-sm">
                 <button type="submit" class="btn btn-primary"><i class="far fa-save mr-2" aria-hidden="true"></i> Save</button>
