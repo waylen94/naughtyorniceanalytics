@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
   <div class="col-md-10 offset-md-1">
+  @include('news._news_exhibition_list')
     <div class="card ">
       <div class="card-header">
         <h1>
