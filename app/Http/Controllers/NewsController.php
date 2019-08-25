@@ -19,7 +19,7 @@ class NewsController extends Controller
 	public function index()
 	{
 		$news = News::with("user")->paginate(5);
-		return view('pages.news&tips', compact('news'));
+		return view('pages.NewsTips', compact('news'));
 	}
 
     public function show(News $news)
