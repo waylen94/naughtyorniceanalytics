@@ -12,7 +12,7 @@ $news_item = $news->items();
                </h6>
                <div class="mb-1 text-white-50 small">Nov 12</div>
                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-               <a class="btn btn-outline-light btn-sm" role="button" href="http://www.jquery2dotnet.com/">Continue reading</a>
+               <a class="btn btn-outline-light btn-sm" role="button" href="#">Continue reading</a>
             </div>
             <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="//placeimg.com/250/250/arch" style="width: 200px; height: 250px;">
          </div>
@@ -26,7 +26,7 @@ $news_item = $news->items();
                </h6>
                <div class="mb-1 text-white-50 small">Nov 11</div>
                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-               <a class="btn btn-outline-light btn-sm" href="http://www.jquery2dotnet.com/">Continue reading</a>
+               <a class="btn btn-outline-light btn-sm" href="#">Continue reading</a>
             </div>
             <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="//placeimg.com/250/250/nature" style="width: 200px; height: 250px;">
          </div>
@@ -41,7 +41,7 @@ $news_item = $news->items();
             <div class="card-body">
                <h5 class="card-title">{{$news_item[2]->title}}</h5>
                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-dark btn-sm">Go somewhere</a>
+               <a href="#" class="btn btn-outline-dark btn-sm">Go somewhere</a>
             </div>
          </div>
       </div>
@@ -51,7 +51,7 @@ $news_item = $news->items();
             <div class="card-body">
                <h5 class="card-title">{{$news_item[3]->title}}</h5>
                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               <a href="http://www.jquery2dotnet.com/" class="btn btn-dark btn-sm">Go somewhere</a>
+               <a href="#" class="btn btn-dark btn-sm">Go somewhere</a>
             </div>
          </div>
       </div>
@@ -61,7 +61,7 @@ $news_item = $news->items();
             <div class="card-body">
                <h5 class="card-title">{{$news_item[4]->title}}</h5>
                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-light btn-sm">Go somewhere</a>
+               <a href="#" class="btn btn-outline-light btn-sm">Go somewhere</a>
             </div>
          </div>
       </div>
