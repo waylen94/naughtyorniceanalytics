@@ -675,3 +675,23 @@ body.sidebar-toggled footer.sticky-footer {
         }
     }
 }
+
+
+/*Benchmark*/
+
+.benchmark-filter-item{
+	position: relative;
+    margin: 1px;
+    float: left;
+    transition-duration: 0.4s;
+    animation: winanim 0.5s ;
+-webkit-backface-visibility:visible;
+    backface-visibility:visible;
+   
+}
+
+@keyframes winanim {
+    0%{opacity:0;transform:scale3d(.3,.3,.3)}
+    50%{opacity:1}
+    
+}

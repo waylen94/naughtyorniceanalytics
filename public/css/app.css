@@ -17574,3 +17574,40 @@ body.sidebar-toggled footer.sticky-footer {
   line-height: 38px;
 }
 
+/*Benchmark*/
+
+.benchmark-filter-item {
+  position: relative;
+  margin: 1px;
+  float: left;
+  transition-duration: 0.4s;
+  -webkit-animation: winanim 0.5s;
+          animation: winanim 0.5s;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+@-webkit-keyframes winanim {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes winanim {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
