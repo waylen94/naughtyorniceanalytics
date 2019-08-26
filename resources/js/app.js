@@ -27,6 +27,8 @@ Vue.component('chart-card', require('./components/ChartCard.vue').default);
 
 Vue.component('benchmark-button', require('./components/BenchmarkButton.vue').default);
 
+Vue.component('testing-benchmark', require('./components/TestingBenchmark.vue').default);
+
 
 
 

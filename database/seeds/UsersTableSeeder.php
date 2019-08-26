@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
     {
         $faker = app(Faker\Generator::class);
         $avatars = [
-            'https://cdn.learnku.com/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/600/h/600',
+            'http://lorempixel.com/600/600/people/',
         ];
         
         $users = factory(User::class)

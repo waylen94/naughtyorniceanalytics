@@ -39,7 +39,7 @@
 
   <!-- Scripts -->
   @yield('diagram_js_script')
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<!--   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
   <script src="{{ mix('js/app.js') }}"></script>
   
    @yield('scripts_editor')
