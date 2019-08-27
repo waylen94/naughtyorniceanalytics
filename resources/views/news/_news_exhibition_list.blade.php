@@ -10,7 +10,6 @@ $news_items = $news->items()
                <h6 class="mb-0">
                   <a class="text-white" href="#">40 Percent of People Can’t Afford Basics</a>
                </h6>
-               <div class="mb-1 text-white-50 small">Nov 12</div>
                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                <a class="btn btn-outline-light btn-sm" role="button" href="#">Continue reading</a>
             </div>
@@ -24,7 +23,6 @@ $news_items = $news->items()
                <h6 class="mb-0">
                   <a class="text-white" href="#">Food for Thought: Diet and Brain Health</a>
                </h6>
-               <div class="mb-1 text-white-50 small">Nov 11</div>
                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                <a class="btn btn-outline-light btn-sm" href="#">Continue reading</a>
             </div>

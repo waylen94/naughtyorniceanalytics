@@ -12,7 +12,6 @@
 		</div>
 		 <!-- Area Chart -->
         <div class="col-xl-8 col-lg-7">
-<!--                       <div class="card shadow mb-4"> -->
                 <!-- Card Header - Dropdown -->
    
               
@@ -32,6 +31,7 @@
 		
 		
 	</div>
+	<!-- ending for the row -->
 </div>
 
 @section("diagram_js_script")

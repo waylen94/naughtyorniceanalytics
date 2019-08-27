@@ -4,7 +4,7 @@
 @section('header', 'Benchmark')
 
 @section('content')
-<div class ="container">
+<div class ="container benchmark-section">
 
     <!-- Filtering with Benchmark -->
 	<div class="row">
@@ -57,17 +57,20 @@
 	</div>
 	
 	
-	<!-- Benchmark Diagram -->
+	
 	<div class = "row">
+	<!-- Benchmark Diagram -->
     	<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 benchmark-content">
         	<div class ="container">
          		<div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                       <h6 class="m-0 font-weight-bold text-primary">The BenchMark Today</h6>
                     </div>
-                    <div class="card-body">
+                    <!-- Actual analysis diagram -->
+                    <div class="card-body"  width="400" height="100">
                       <div class="chart-area">
-                        <canvas id="dashboard-benchmark-canvas"></canvas>
+<!--                         <canvas id="dashboard-benchmark-canvas"></canvas> -->
+							<benchmark-analysis></benchmark-analysis>
                       </div>
                     </div>
                   </div>

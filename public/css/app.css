@@ -17576,7 +17576,7 @@ body.sidebar-toggled footer.sticky-footer {
 
 /*Benchmark*/
 
-.benchmark-filter-item {
+.benchmark-section .benchmark-filter-item {
   position: relative;
   margin: 1px;
   float: left;
@@ -17609,5 +17609,10 @@ body.sidebar-toggled footer.sticky-footer {
   50% {
     opacity: 1;
   }
+}
+
+.benchmark-section .card-body {
+  max-height: 55%;
+  max-width: 65%;
 }
 

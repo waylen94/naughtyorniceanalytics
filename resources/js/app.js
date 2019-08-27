@@ -29,6 +29,8 @@ Vue.component('benchmark-button', require('./components/BenchmarkButton.vue').de
 
 Vue.component('testing-benchmark', require('./components/TestingBenchmark.vue').default);
 
+Vue.component('benchmark-analysis', require('./components/BenchmarkAnalysis.vue').default);
+
 
 
 
