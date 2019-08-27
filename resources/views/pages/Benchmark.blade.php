@@ -4,7 +4,7 @@
 @section('header', 'Benchmark')
 
 @section('content')
-<div class ="container benchmark-section">
+<div class="container-fluid">
 
     <!-- Filtering with Benchmark -->
 	<div class="row">
@@ -67,10 +67,9 @@
                       <h6 class="m-0 font-weight-bold text-primary">The BenchMark Today</h6>
                     </div>
                     <!-- Actual analysis diagram -->
-                    <div class="card-body"  width="400" height="100">
+                    <div class="card-body">
                       <div class="chart-area">
-<!--                         <canvas id="dashboard-benchmark-canvas"></canvas> -->
-							<benchmark-analysis></benchmark-analysis>
+                        <canvas id="dashboard-benchmark-canvas"></canvas>
                       </div>
                     </div>
                   </div>

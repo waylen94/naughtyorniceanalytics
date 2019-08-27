@@ -5,7 +5,6 @@
  */
 
 require('./bootstrap');
-
 window.Vue = require('vue');
 
 /**
@@ -19,17 +18,17 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
-Vue.component('stats-card', require('./components/statescard.vue').default);
-
-Vue.component('chart-card', require('./components/ChartCard.vue').default);
-
-Vue.component('benchmark-button', require('./components/BenchmarkButton.vue').default);
-
+//Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+//
+//Vue.component('stats-card', require('./components/statescard.vue').default);
+//
+//Vue.component('chart-card', require('./components/ChartCard.vue').default);
+//
+//Vue.component('benchmark-button', require('./components/BenchmarkButton.vue').default);
+//
 Vue.component('testing-benchmark', require('./components/TestingBenchmark.vue').default);
-
-Vue.component('benchmark-analysis', require('./components/BenchmarkAnalysis.vue').default);
+//
+//Vue.component('benchmark-analysis', require('./components/BenchmarkAnalysis.vue').default);
 
 
 

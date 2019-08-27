@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'News & Tips')
 @section('content')
-<div class="container">
+<div class="container-fluid">
   <div class="col-md-10 offset-md-1">
   @include('news._news_exhibition_list',['news'=> $news])
           <div class="mt-5">
