@@ -19,8 +19,12 @@ class PagesController extends Controller
     
     public function dashboard(User $user)
     {
+        if(!$user->Hotel()->get()->isEmpty()){
         $platewaste = $user->Hotel->platewaste->take(10);
         return view('pages.Dashboard',compact('user','platewaste'));
+        }else{
+            return view('pages.Contact', compact('user'));
+        }
     }
     public function account(User $user)
     {
