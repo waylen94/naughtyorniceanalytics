@@ -17576,6 +17576,18 @@ body.sidebar-toggled footer.sticky-footer {
 
 /*Benchmark*/
 
+.benchmark-section #benchmark-benchmark-canvas {
+  background-image: url(/images/normal_distribution_graph.png?1fa35b60c7fba506a8eb445d2e55ce98);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  width: 100%;
+  height: 100%;
+  /* For at least Firefox */
+  min-height: 100%;
+}
+
 .benchmark-section .benchmark-filter-item {
   position: relative;
   margin: 1px;

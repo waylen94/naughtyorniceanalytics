@@ -82782,20 +82782,69 @@ if (document.getElementById('dashboard-trending-canvas')) {
 
 ;
 
-if (document.getElementById('dashboard-benchmark-canvas')) {
-  var ctx = document.getElementById('dashboard-benchmark-canvas').getContext('2d');
+if (document.getElementById('benchmark-benchmark-canvas')) {
+  var ctx = document.getElementById('benchmark-benchmark-canvas').getContext('2d');
   var chart_line_testing = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
-    // The data for our dataset
+    type: 'bubble',
     data: {
-      labels: ['08-May', '09-May', '10-May', '11-May', '12-May', '13-May', '14-May', '15-May', '16-May', '18-May'],
+      labels: "Africa",
       datasets: [{
-        data: [json_data[0].B, json_data[1].B, json_data[2].B, json_data[3].B, json_data[4].B, json_data[5].B, json_data[6].B, json_data[7].B, json_data[8].B, json_data[9].B],
-        label: 'Plate Waste/Gram',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)'
+        label: ["Max Waste"],
+        backgroundColor: "rgba(255,221,50,0.2)",
+        borderColor: "rgba(255,221,50,1)",
+        data: [{
+          x: 850,
+          y: 0,
+          r: 10
+        }]
+      }, {
+        label: ["Average Waste"],
+        backgroundColor: "rgba(60,186,159,0.2)",
+        borderColor: "rgba(60,186,159,1)",
+        data: [{
+          x: 650,
+          y: 10,
+          r: 10
+        }]
+      }, {
+        label: ["Min Waste"],
+        backgroundColor: "rgba(0,0,0,0.2)",
+        borderColor: "#000",
+        data: [{
+          x: 400,
+          y: 0,
+          r: 10
+        }]
+      }, {
+        label: ["Your Waste"],
+        backgroundColor: "rgba(193,46,12,0.85)",
+        borderColor: "rgba(193,46,12,1)",
+        data: [{
+          x: 490,
+          y: 6,
+          r: 30
+        }]
       }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Past 7 Days Performance Trending BenchMark'
+      },
+      scales: {
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: "Performance Scales"
+          }
+        }],
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: "Average Waste (Kilogram)"
+          }
+        }]
+      }
     }
   });
 }
