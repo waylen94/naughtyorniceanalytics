@@ -55,11 +55,17 @@ class PagesController extends Controller
             $max = $collection->max();
             $performance = $user->hotel->platewaste->take(7)->pluck('weight_kg')->avg();
             
-            
-            return collect([$min,$avg,$max,$performance]); 
+                return collect([$min,$avg,$max,$performance]); 
             }else{
+                
                 return collect([0,0,0,0]);
             }
+        }
+        
+        function platewaste_statistics($hotel_data){
+            return $hotel_data->map(function ($item, $key) {
+                return $item->platewaste->take(7)->pluck('weight_kg')->avg();
+            });
         }
        
         //Star Hotel for Benchmark
@@ -70,55 +76,70 @@ class PagesController extends Controller
         $five_star_hotel = Hotel::where('star',5)->get();
         
         //room number hotel for benchmark
-        $less_100_hotel = Hotel::where('room_number','<=',100);
+        $less_100_hotel = Hotel::where('room_number','<=',100)->get();
         
-        $between_100_hotel = Hotel::whereBetween('room_number',[100,200]);
-        $between_200_hotel = Hotel::whereBetween('room_number',[200,300]);
-        $between_300_hotel = Hotel::whereBetween('room_number',[300,400]);
-        $between_400_hotel = Hotel::whereBetween('room_number',[400,500]);
+        $between_100_hotel = Hotel::whereBetween('room_number',[100,200])->get();
+        $between_200_hotel = Hotel::whereBetween('room_number',[200,300])->get();
+        $between_300_hotel = Hotel::whereBetween('room_number',[300,400])->get();
+        $between_400_hotel = Hotel::whereBetween('room_number',[400,500])->get();
         
-        $more_500_hotel = Hotel::where('room_number','>=',500);
+        $more_500_hotel = Hotel::where('room_number','>=',500)->get();
         
         //country hotel for benchmark
-        $america_hotel = Hotel::where('country','America');
-        $australia_hotel = Hotel::where('country','Australia');
+        $america_hotel = Hotel::where('country','America')->get();
+        $australia_hotel = Hotel::where('country','Australia')->get();
         
         
         //style hotel for benchmark
-        $business_hotel = Hotel::where('style','Business');
-        $leisure_hotel = Hotel::where('style','Leisure');
+        $business_hotel = Hotel::where('style','Business')->get();
+        $leisure_hotel = Hotel::where('style','Leisure')->get();
         
         
         /**
          * calculate corresponded benchamrk for different type of hotels
          * */
         //1 star
-        $one_star_statistics = $one_star_hotel->map(function ($item, $key) {
-            return $item->platewaste->take(7)->pluck('weight_kg')->avg();
-        });
-        //2 star
-        $two_star_statistics = $two_star_hotel->map(function ($item, $key) {
-            return $item->platewaste->take(7)->pluck('weight_kg')->avg();
-        });
-        //3 star
-        $three_star_statistics = $three_star_hotel->map(function ($item, $key) {
-            return $item->platewaste->take(7)->pluck('weight_kg')->avg();
-        });
-        //4 star
-        $four_star_statistics = $four_star_hotel->map(function ($item, $key) {
-            return $item->platewaste->take(7)->pluck('weight_kg')->avg();
-            });       
-       //5 star
-        $five_star_statistics = $five_star_hotel->map(function ($item, $key) {
-            return $item->platewaste->take(7)->pluck('weight_kg')->avg();
-            });
+//         $one_star_statistics = $one_star_hotel->map(function ($item, $key) {
+//             return $item->platewaste->take(7)->pluck('weight_kg')->avg();
+//         });
+        
+//         //2 star
+//         $two_star_statistics = $two_star_hotel->map(function ($item, $key) {
+//             return $item->platewaste->take(7)->pluck('weight_kg')->avg();
+//         });
+//         //3 star
+//         $three_star_statistics = $three_star_hotel->map(function ($item, $key) {
+//             return $item->platewaste->take(7)->pluck('weight_kg')->avg();
+//         });
+//         //4 star
+//         $four_star_statistics = $four_star_hotel->map(function ($item, $key) {
+//             return $item->platewaste->take(7)->pluck('weight_kg')->avg();
+//             });       
+//        //5 star
+//         $five_star_statistics = $five_star_hotel->map(function ($item, $key) {
+//             return $item->platewaste->take(7)->pluck('weight_kg')->avg();
+//             });
+        $one_star_statistics = platewaste_statistics($one_star_hotel);
+        $two_star_statistics = platewaste_statistics($two_star_hotel);
+        $three_star_statistics = platewaste_statistics($three_star_hotel);
+        $four_star_statistics = platewaste_statistics($four_star_hotel);
+        $five_star_statistics = platewaste_statistics($five_star_hotel);
         
        //room number benchamrk statistics
+       $less_100_room_statistics = platewaste_statistics($less_100_hotel);
+       $between_100_room_statistics = platewaste_statistics($between_100_hotel);
+       $between_200_room_statistics = platewaste_statistics($between_200_hotel);
+       $between_300_room_statistics = platewaste_statistics($between_300_hotel);
+       $between_400_room_statistics = platewaste_statistics($between_400_hotel);
+       $more_500_room_statistics = platewaste_statistics($more_500_hotel);
         
        //country benchamrk statistics
+       $america_hotel_statistics = platewaste_statistics($america_hotel);
+       $australia_hotel_statistics = platewaste_statistics($australia_hotel);
        
         //style benchamrk statistics
-        
+        $leisure_hotel_statistics = platewaste_statistics($leisure_hotel);
+        $business_hotel_statistics = platewaste_statistics($business_hotel);
         
         
         //final benchmark dataset
@@ -132,14 +153,24 @@ class PagesController extends Controller
             
         ]);
         
+        $room_benchmark = collect([
+            '0'=>benchamrk_dataset($user, $less_100_room_statistics),
+            '100'=>benchamrk_dataset($user, $between_100_room_statistics),
+            '200'=>benchamrk_dataset($user, $between_200_room_statistics),
+            '300'=>benchamrk_dataset($user, $between_300_room_statistics),
+            '400'=>benchamrk_dataset($user, $between_400_room_statistics),
+            '500'=>benchamrk_dataset($user, $more_500_room_statistics)
+        ]);
+        $country_benchmark = collect([
+            'america'=>benchamrk_dataset($user, $america_hotel_statistics),
+            'australia'=>benchamrk_dataset($user, $australia_hotel_statistics)
+        ]);
+        $type_benchmark = collect([
+            'leisure'=>benchamrk_dataset($user, $leisure_hotel_statistics),
+            'business'=>benchamrk_dataset($user, $business_hotel_statistics)
+        ]);
         
         
-        
-        $room_benchmark = [];
-        $country_benchmark = [];
-        $type_benchmark = [];
-        
-        
-        return view('pages.Benchmark', compact('user','star_benchmark'));
+        return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
     }
 }
