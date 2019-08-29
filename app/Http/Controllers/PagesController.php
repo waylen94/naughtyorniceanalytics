@@ -47,13 +47,28 @@ class PagesController extends Controller
         return view('pages.News&Tips', compact('user'));
     }
     public function benchmark(User $user)
-    {        
+    {
+        function benchamrk_dataset($user, $collection){
+            if($collection->count()>=3){
+            $min = $collection->min();
+            $avg = $collection->avg();
+            $max = $collection->max();
+            $performance = $user->hotel->platewaste->take(7)->pluck('weight_kg')->avg();
+            
+            
+            return collect([$min,$avg,$max,$performance]); 
+            }else{
+                return collect([0,0,0,0]);
+            }
+        }
+       
         //Star Hotel for Benchmark
         $one_star_hotel = Hotel::where('star',1)->get();
         $two_star_hotel = Hotel::where('star',2)->get();
         $three_star_hotel = Hotel::where('star',3)->get();
         $four_star_hotel = Hotel::where('star',4)->get();
         $five_star_hotel = Hotel::where('star',5)->get();
+        
         //room number hotel for benchmark
         $less_100_hotel = Hotel::where('room_number','<=',100);
         
@@ -98,14 +113,32 @@ class PagesController extends Controller
             return $item->platewaste->take(7)->pluck('weight_kg')->avg();
             });
         
-       //room number 
+       //room number benchamrk statistics
         
-        
+       //country benchamrk statistics
+       
+        //style benchamrk statistics
         
         
         
         //final benchmark dataset
-        $star_benchmark = collect([['one'=>$one_star_statistics],['two'=>$two_star_statistics],['three'=>$three_star_statistics],['four'=>$four_star_statistics],['five'=>$five_star_statistics]]);
+        $star_benchmark = collect([
+            
+            'one'=>benchamrk_dataset($user, $one_star_statistics),
+            'two'=>benchamrk_dataset($user, $two_star_statistics),
+            'three'=>benchamrk_dataset($user, $three_star_statistics),
+            'four'=>benchamrk_dataset($user, $four_star_statistics),
+            'five'=>benchamrk_dataset($user, $five_star_statistics)
+            
+        ]);
+        
+        
+        
+        
+        $room_benchmark = [];
+        $country_benchmark = [];
+        $type_benchmark = [];
+        
         
         return view('pages.Benchmark', compact('user','star_benchmark'));
     }

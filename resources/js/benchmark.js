@@ -7,11 +7,11 @@ if(document.getElementById('benchmark-benchmark-canvas')){
 	      labels: "Africa",
 	      datasets: [
 	        {
-	          label: ["Max Waste"],
+	          label: ["Min Waste"],
 	          backgroundColor: "rgba(255,221,50,0.2)",
 	          borderColor: "rgba(255,221,50,1)",
 	          data: [{
-	            x: 850,
+	            x: 400,
 	            y: 0,
 	            r: 10
 	          }]
@@ -25,11 +25,11 @@ if(document.getElementById('benchmark-benchmark-canvas')){
 	            r: 10
 	          }]
 	        }, {
-	          label: ["Min Waste"],
+	          label: ["Max Waste"],
 	          backgroundColor: "rgba(0,0,0,0.2)",
 	          borderColor: "#000",
 	          data: [{
-	            x: 400,
+	            x: 850,
 	            y: 0,
 	            r: 10
 	          }]
@@ -70,53 +70,19 @@ if(document.getElementById('benchmark-benchmark-canvas')){
 	
 	var chart = chart_benchmark;
 	
-	// 1 star event driven
-	if(document.getElementById("rating-star-1")){
-	document.getElementById("rating-star-1").onclick = onestarhotel;
-		function onestarhotel(){
-				
-				chart.data.datasets[0].data=[{x:666,y:222,r:20}];
-				chart.update();
-		
-			};	
-	};
 	
-	//2  star event driven
-	if(document.getElementById("rating-star-2")){
-	document.getElementById("rating-star-2").onclick = twostarhotel;
-		function twostarhotel(){
-		
-		chart.data.datasets[0].data=[{x:666,y:222,r:20}];
+	window.chartChange =function chartChange(list){
+		var min, avg, max, performance;
+		min = list[0];
+		avg = list[1];
+		max = list[2];
+		performance = list[3];
+		var performance_scale = (1-(Math.abs(performance-avg))/avg)*10;
+		chart.data.datasets[0].data=[{x:min,y:0,r:10}];
+		chart.data.datasets[1].data=[{x:avg,y:10,r:10}];
+		chart.data.datasets[2].data=[{x:max,y:0,r:10}];
+		chart.data.datasets[3].data=[{x:performance,y:performance_scale,r:20}];
 		chart.update();
-		};
-	};
+	}
 	
-	// 3 star event driven
-	if(document.getElementById("rating-star-3")){
-	document.getElementById("rating-star-3").onclick = threestarhotel;
-		function threestarhotel(){
-				
-				chart.data.datasets[0].data=[{x:666,y:222,r:20}];
-				chart.update();
-			};
-	};
 	
-	//4 star event driven
-	if(document.getElementById("rating-star-4")){
-	document.getElementById("rating-star-4").onclick = fourstarhotel;
-		function fourstarhotel(){
-				chart.data.datasets[0].data=[{x:666,y:222,r:20}];
-				chart.update();
-			};
-	};
-	
-	//5 star event driven
-	if(document.getElementById("rating-star-5")){
-	document.getElementById("rating-star-5").onclick = fivestarhotel;
-		function fivestarhotel(){
-				
-				chart.data.datasets[0].data=[{x:666,y:222,r:20}];
-				chart.update();
-		
-			};
-	};
