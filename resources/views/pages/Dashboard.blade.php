@@ -4,9 +4,9 @@
 
 @section('content')
   @include('analytics.dashboard')
-  <example-component></example-component>
+<!--   <example-component></example-component> -->
   
-  <testing-benchmark></testing-benchmark>
+<!--   <testing-benchmark></testing-benchmark> -->
   
 <!--   <div class="col-xl-3 col-md-6"> -->
 <!--           <stats-card> -->
@@ -23,7 +23,7 @@
 <!--           </stats-card> -->
 <!--         </div> -->
 
-	<chart-card></chart-card>
+<!-- 	<chart-card></chart-card> -->
     @section('script')
     @stop
 @stop
