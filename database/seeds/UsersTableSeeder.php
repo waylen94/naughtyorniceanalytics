@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
         ];
         
         $users = factory(User::class)
-        ->times(10)
+        ->times(20)
         ->make()
         ->each(function ($user, $index)
             use ($faker, $avatars)
