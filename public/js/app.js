@@ -82564,6 +82564,165 @@ var app = new Vue({
 
 /***/ }),
 
+/***/ "./resources/js/benchmark.js":
+/*!***********************************!*\
+  !*** ./resources/js/benchmark.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+if (document.getElementById('benchmark-benchmark-canvas')) {
+  var ctx = document.getElementById('benchmark-benchmark-canvas').getContext('2d');
+  var chart_benchmark = new Chart(ctx, {
+    type: 'bubble',
+    data: {
+      labels: "Africa",
+      datasets: [{
+        label: ["Max Waste"],
+        backgroundColor: "rgba(255,221,50,0.2)",
+        borderColor: "rgba(255,221,50,1)",
+        data: [{
+          x: 850,
+          y: 0,
+          r: 10
+        }]
+      }, {
+        label: ["Average Waste"],
+        backgroundColor: "rgba(60,186,159,0.2)",
+        borderColor: "rgba(60,186,159,1)",
+        data: [{
+          x: 650,
+          y: 10,
+          r: 10
+        }]
+      }, {
+        label: ["Min Waste"],
+        backgroundColor: "rgba(0,0,0,0.2)",
+        borderColor: "#000",
+        data: [{
+          x: 400,
+          y: 0,
+          r: 10
+        }]
+      }, {
+        label: ["Your Waste"],
+        backgroundColor: "rgba(193,46,12,0.85)",
+        borderColor: "rgba(193,46,12,1)",
+        data: [{
+          x: 490,
+          y: 6,
+          r: 30
+        }]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Past 7 Days Performance Trending BenchMark'
+      },
+      scales: {
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: "Performance Scales"
+          }
+        }],
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: "Average Waste (Kilogram)"
+          }
+        }]
+      }
+    }
+  });
+}
+
+;
+var chart = chart_benchmark; // 1 star event driven
+
+if (document.getElementById("rating-star-1")) {
+  var onestarhotel = function onestarhotel() {
+    chart.data.datasets[0].data = [{
+      x: 666,
+      y: 222,
+      r: 20
+    }];
+    chart.update();
+  };
+
+  document.getElementById("rating-star-1").onclick = onestarhotel;
+  ;
+}
+
+; //2  star event driven
+
+if (document.getElementById("rating-star-2")) {
+  var twostarhotel = function twostarhotel() {
+    chart.data.datasets[0].data = [{
+      x: 666,
+      y: 222,
+      r: 20
+    }];
+    chart.update();
+  };
+
+  document.getElementById("rating-star-2").onclick = twostarhotel;
+  ;
+}
+
+; // 3 star event driven
+
+if (document.getElementById("rating-star-3")) {
+  var threestarhotel = function threestarhotel() {
+    chart.data.datasets[0].data = [{
+      x: 666,
+      y: 222,
+      r: 20
+    }];
+    chart.update();
+  };
+
+  document.getElementById("rating-star-3").onclick = threestarhotel;
+  ;
+}
+
+; //4 star event driven
+
+if (document.getElementById("rating-star-4")) {
+  var fourstarhotel = function fourstarhotel() {
+    chart.data.datasets[0].data = [{
+      x: 666,
+      y: 222,
+      r: 20
+    }];
+    chart.update();
+  };
+
+  document.getElementById("rating-star-4").onclick = fourstarhotel;
+  ;
+}
+
+; //5 star event driven
+
+if (document.getElementById("rating-star-5")) {
+  var fivestarhotel = function fivestarhotel() {
+    chart.data.datasets[0].data = [{
+      x: 666,
+      y: 222,
+      r: 20
+    }];
+    chart.update();
+  };
+
+  document.getElementById("rating-star-5").onclick = fivestarhotel;
+  ;
+}
+
+;
+
+/***/ }),
+
 /***/ "./resources/js/bootstrap.js":
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
@@ -82752,16 +82911,14 @@ module.exports = "/images/normaldistribution.png?4f93e4f02d12329c83f90bb03fa3705
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var json_data = []; //store the json data array
-
-$.ajax({
-  url: '../uploads/Json/fake_testingdata_trending.json',
-  async: false,
-  success: function success(data) {
-    json_data = data;
-  }
-});
-
+//var json_data = [];//store the json data array
+//$.ajax({
+//    url: '../uploads/Json/fake_testingdata_trending.json',
+//    async: false,
+//    success: function (data) {
+//    	json_data = data;
+//    }
+//});
 if (document.getElementById('dashboard-trending-canvas')) {
   var ctx = document.getElementById('dashboard-trending-canvas').getContext('2d');
   var chart_line_testing = new Chart(ctx, {
@@ -82776,75 +82933,6 @@ if (document.getElementById('dashboard-trending-canvas')) {
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)'
       }]
-    }
-  });
-}
-
-;
-
-if (document.getElementById('benchmark-benchmark-canvas')) {
-  var ctx = document.getElementById('benchmark-benchmark-canvas').getContext('2d');
-  var chart_line_testing = new Chart(ctx, {
-    type: 'bubble',
-    data: {
-      labels: "Africa",
-      datasets: [{
-        label: ["Max Waste"],
-        backgroundColor: "rgba(255,221,50,0.2)",
-        borderColor: "rgba(255,221,50,1)",
-        data: [{
-          x: 850,
-          y: 0,
-          r: 10
-        }]
-      }, {
-        label: ["Average Waste"],
-        backgroundColor: "rgba(60,186,159,0.2)",
-        borderColor: "rgba(60,186,159,1)",
-        data: [{
-          x: 650,
-          y: 10,
-          r: 10
-        }]
-      }, {
-        label: ["Min Waste"],
-        backgroundColor: "rgba(0,0,0,0.2)",
-        borderColor: "#000",
-        data: [{
-          x: 400,
-          y: 0,
-          r: 10
-        }]
-      }, {
-        label: ["Your Waste"],
-        backgroundColor: "rgba(193,46,12,0.85)",
-        borderColor: "rgba(193,46,12,1)",
-        data: [{
-          x: 490,
-          y: 6,
-          r: 30
-        }]
-      }]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'Past 7 Days Performance Trending BenchMark'
-      },
-      scales: {
-        yAxes: [{
-          scaleLabel: {
-            display: true,
-            labelString: "Performance Scales"
-          }
-        }],
-        xAxes: [{
-          scaleLabel: {
-            display: true,
-            labelString: "Average Waste (Kilogram)"
-          }
-        }]
-      }
     }
   });
 }
@@ -82883,14 +82971,15 @@ if (document.getElementById('benchmark-benchmark-canvas')) {
 /***/ }),
 
 /***/ 0:
-/*!****************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/js/creative.js ./resources/sass/app.scss ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/js/creative.js ./resources/js/benchmark.js ./resources/sass/app.scss ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/vagrant/Code/naughtyorniceanalytics/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /home/vagrant/Code/naughtyorniceanalytics/resources/js/creative.js */"./resources/js/creative.js");
+__webpack_require__(/*! /home/vagrant/Code/naughtyorniceanalytics/resources/js/benchmark.js */"./resources/js/benchmark.js");
 module.exports = __webpack_require__(/*! /home/vagrant/Code/naughtyorniceanalytics/resources/sass/app.scss */"./resources/sass/app.scss");
 
 

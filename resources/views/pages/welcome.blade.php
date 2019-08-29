@@ -21,7 +21,7 @@
                                 <h1 class ="display-1">Naughty or Nice ?</h1>
                                 <p>Establish a daily benchamrk through statistics to keep track of your environmental performance.</p>
                                 @auth
-                                <a href="{{ route('dashboard', Auth::id()) }}" class="btn btn-success">How are your traveling</a>
+                                <a href="{{ route('dashboard', Auth::id()) }}" class="btn btn-success">My Performance</a>
                                 @else
                                 <div class="homepage-btn">
                                     <a href="{{ route('login') }}" class="btn btn-primary first">Get Started</a>

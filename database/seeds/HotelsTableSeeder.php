@@ -16,6 +16,28 @@ class HotelsTableSeeder extends Seeder
         });
 
         Hotel::insert($hotels->toArray());
+        
+        
+        $user = Hotel::find(1);
+        $user->country = 'Australia';
+        $user->style = 'Business';
+        $user->save();
+        $user = Hotel::find(2);
+        $user->country = 'Australia';
+        $user->style = 'Business';
+        $user->save();
+        $user = Hotel::find(3);
+        $user->country = 'Australia';
+        $user->style = 'Business';
+        $user->save();
+        $user = Hotel::find(4);
+        $user->country = 'America';
+        $user->style = 'Leisure';
+        $user->save();
+        $user = Hotel::find(5);
+        $user->country = 'America';
+        $user->style = 'Leisure';
+        $user->save();
     }
 
 }

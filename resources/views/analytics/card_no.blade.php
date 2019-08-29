@@ -4,17 +4,21 @@
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary mb-1">@switch($i)
                                                                                 @case(1)
-                                                                                    Total Waste Weight
+                                                                                    Total Plate Waste for Seven Days
                                                                                     @break
                                                                             
                                                                                 @case(2)
-                                                                                    Dining Number
+                                                                                    Total number of Dinners for Seven Days
                                                                                     @break
                                                                             	@case(3)
-                                                                            		Per Meal Per person
+                                                                            		Plate Waste per Meal per Person
                                                                             		@break
                                                                             	@case(4)
-                                                                            		Comparing Last Day
+                                                                            		Highest plate waste per day ever
+                                                                            		@break	
+                                                                            	@case(5)
+                                                                            		Lowest plate waste per day ever
+                                                                            		@break
                                                                             @endswitch</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">@switch($i)
                                                                                 @case(1)
@@ -29,7 +33,10 @@
                                                                             		kg
                                                                             		@break
                                                                             	@case(4)
-                                                                            		2 kg Less
+                                                                            		{{$platewaste->pluck('weight_kg')->sum()}} kg
+                                                                            		@break
+                                                                            	@case(5)
+                                                                            		{{$platewaste->pluck('weight_kg')->min()}} kg
                                                                             		@break
                                                                             @endswitch</div>
                     </div>
