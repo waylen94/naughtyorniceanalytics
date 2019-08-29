@@ -16,7 +16,7 @@ class PlatewastesTableSeeder extends Seeder
         $hotel_ids = ['1','2','3','4','5'];
         $faker = app(Faker\Generator::class);
         
-        $platewastes = factory(Platewaste::class)->times(100)->make()
+        $platewastes = factory(Platewaste::class)->times(300)->make()
         ->each(function ($platewaste) use ($faker, $hotel_ids) {
             
             $platewaste->hotel_id = $faker->randomElement($hotel_ids);

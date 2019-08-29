@@ -79,23 +79,23 @@ class PagesController extends Controller
          * */
         //1 star
         $one_star_statistics = $one_star_hotel->map(function ($item, $key) {
-            return $item->platewaste->take(7)->avg();
+            return $item->platewaste->take(7)->pluck('weight_kg')->avg();
         });
         //2 star
         $two_star_statistics = $two_star_hotel->map(function ($item, $key) {
-            return $item->platewaste->take(7)->avg();
+            return $item->platewaste->take(7)->pluck('weight_kg')->avg();
         });
         //3 star
         $three_star_statistics = $three_star_hotel->map(function ($item, $key) {
-            return $item->platewaste->take(7)->avg();
+            return $item->platewaste->take(7)->pluck('weight_kg')->avg();
         });
         //4 star
         $four_star_statistics = $four_star_hotel->map(function ($item, $key) {
-            return $item->platewaste->take(7)->avg();
+            return $item->platewaste->take(7)->pluck('weight_kg')->avg();
             });       
        //5 star
         $five_star_statistics = $five_star_hotel->map(function ($item, $key) {
-             return $item->platewaste->take(7)->avg();
+            return $item->platewaste->take(7)->pluck('weight_kg')->avg();
             });
         
        //room number 
