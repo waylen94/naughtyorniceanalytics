@@ -82671,6 +82671,33 @@ window.chartChange = function chartChange(list) {
   chart.update();
 };
 
+Chart.plugins.register({
+  afterDraw: function afterDraw(chart) {
+    //			console.log('After draw: ', chart);
+    //			console.log('Title: ', chart.options.title.text);
+    //			console.log(chart.data.datasets[0].data.length,  chart.canvas.id, chart.data.datasets[0].data);
+    if (chart.data.datasets[0].data[0].x === 0) {
+      // No data is present
+      var ctx = chart.chart.ctx;
+      var width = chart.chart.width;
+      var height = chart.chart.height;
+      chart.clear();
+      ctx.save();
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillStyle = 'rgba(0, 153, 255,0.7)';
+      ctx.font = "40px sans-serif"; // chart.options.title.text <=== gets title from chart 
+      // width / 2 <=== centers title on canvas 
+      // 18 <=== aligns text 18 pixels from top, just like Chart.js 
+
+      ctx.fillText('Corresponded Data is being Gathering.', width / 2, 30); // <====   ADDS TITLE
+
+      ctx.fillText('Thank you for your Patient!', width / 2, height / 2);
+      ctx.restore();
+    }
+  }
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

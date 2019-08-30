@@ -64,7 +64,7 @@
         	<div class ="container">
          		<div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 class="m-0 font-weight-bold text-primary">The BenchMark Today</h6>
+                      <p class="m-0 font-weight-bold text-primary">BenchMark Comparison</p>
                     </div>
                     <!-- Actual analysis diagram -->
                     <div class="card-body">
