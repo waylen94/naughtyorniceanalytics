@@ -2,6 +2,7 @@
 @section('title', 'News & Tips')
 @section('content')
 <div class="container-fluid">
+<a class="btn btn-success float-right" href="{{ route('news.create') }}">Create</a>
   <div class="col-md-10 offset-md-1">
   @include('news._news_exhibition_list',['news'=> $news])
           <div class="mt-5">
