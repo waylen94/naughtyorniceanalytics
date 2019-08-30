@@ -82639,7 +82639,24 @@ if (document.getElementById('benchmark-benchmark-canvas')) {
 }
 
 ;
-var chart = chart_benchmark;
+var benchmark_polarity_chart = new Chart(document.getElementById("benchmark-polarity-canvas"), {
+  type: 'polarArea',
+  data: {
+    labels: ["Max", "Avg", "Min", "Your"],
+    datasets: [{
+      label: "Plate Waste",
+      backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9"],
+      data: [2478, 5267, 734, 784]
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'performance exhibited in polar chart'
+    }
+  }
+}); //chart_benchmark
+//benchamrk_polarity_chart
 
 window.chartChange = function chartChange(list) {
   var min, avg, max, performance;
@@ -82648,40 +82665,42 @@ window.chartChange = function chartChange(list) {
   max = list[2];
   performance = list[3];
   var performance_scale = (1 - Math.abs(performance - avg) / avg) * 10;
-  chart.data.datasets[0].data = [{
+  chart_benchmark.data.datasets[0].data = [{
     x: min,
     y: 0,
     r: 10
   }];
-  chart.data.datasets[1].data = [{
+  chart_benchmark.data.datasets[1].data = [{
     x: avg,
     y: 10,
     r: 10
   }];
-  chart.data.datasets[2].data = [{
+  chart_benchmark.data.datasets[2].data = [{
     x: max,
     y: 0,
     r: 10
   }];
-  chart.data.datasets[3].data = [{
+  chart_benchmark.data.datasets[3].data = [{
     x: performance,
     y: performance_scale,
     r: 20
   }];
-  chart.update();
+  chart_benchmark.update();
+  benchmark_polarity_chart.data.datasets[0].data = [max, avg, min, performance];
+  benchmark_polarity_chart.update();
 };
 
 Chart.plugins.register({
-  afterDraw: function afterDraw(chart) {
+  afterDraw: function afterDraw(chart_benchmark) {
     //			console.log('After draw: ', chart);
     //			console.log('Title: ', chart.options.title.text);
     //			console.log(chart.data.datasets[0].data.length,  chart.canvas.id, chart.data.datasets[0].data);
-    if (chart.data.datasets[0].data[0].x === 0) {
+    if (chart_benchmark.data.datasets[0].data[0].x === 0) {
       // No data is present
-      var ctx = chart.chart.ctx;
-      var width = chart.chart.width;
-      var height = chart.chart.height;
-      chart.clear();
+      var ctx = chart_benchmark.chart.ctx;
+      var width = chart_benchmark.chart.width;
+      var height = chart_benchmark.chart.height;
+      chart_benchmark.clear();
       ctx.save();
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
