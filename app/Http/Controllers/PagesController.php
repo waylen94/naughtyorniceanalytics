@@ -22,7 +22,7 @@ class PagesController extends Controller
     {
         if(!$user->Hotel()->get()->isEmpty()){
             
-            $platewaste = $user->Hotel->platewaste->take(10);
+            $platewaste = $user->Hotel->platewaste->take(7);
             return view('pages.Dashboard',compact('user','platewaste'));
         }else{
             
@@ -50,10 +50,10 @@ class PagesController extends Controller
     {
         function benchamrk_dataset($user, $collection){
             if($collection->count()>=3){
-            $min = $collection->min();
-            $avg = $collection->avg();
-            $max = $collection->max();
-            $performance = $user->hotel->platewaste->take(7)->pluck('weight_kg')->avg();
+            $min = round($collection->min(),2);
+            $avg = round($collection->avg(),2);
+            $max = round($collection->max(),2);
+            $performance = round($user->hotel->platewaste->take(7)->pluck('weight_kg')->avg(),2);
             
                 return collect([$min,$avg,$max,$performance]); 
             }else{

@@ -7,6 +7,7 @@
 		@include('analytics.card_no',['i' => '2'])
 		@include('analytics.card_no',['i' => '3'])
 		@include('analytics.card_no',['i' => '4'])
+		@include('analytics.card_no',['i' => '5'])
 		@include('analytics.card_performance')
 
 		</div>
@@ -18,7 +19,7 @@
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown? -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">10-Day Trending</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">7 Days Trending</h6>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
@@ -36,7 +37,7 @@
 
 @section("diagram_js_script")
 	<script>
-		var json_data_benchmark_date = ['08-May', '09-May', '10-May','11-May', '12-May','13-May', '14-May', '15-May', '16-May', '18-May'];
+		var json_data_benchmark_date = ['08-May', '09-May', '10-May','11-May', '12-May','13-May', '14-May'];
 		console.log(json_data_benchmark_date);
 		var json_data_benchmark_data =  {{ $platewaste->pluck('weight_kg')->toJson(JSON_PRETTY_PRINT) }} ;
  	</script>

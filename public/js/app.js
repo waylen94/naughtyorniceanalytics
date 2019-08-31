@@ -82665,6 +82665,7 @@ window.chartChange = function chartChange(list) {
   max = list[2];
   performance = list[3];
   var performance_scale = (1 - Math.abs(performance - avg) / avg) * 10;
+  performance_scale = performance_scale.toFixed(2);
   chart_benchmark.data.datasets[0].data = [{
     x: min,
     y: 0,

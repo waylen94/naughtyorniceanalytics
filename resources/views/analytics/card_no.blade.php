@@ -14,10 +14,10 @@
                                                                             		Plate Waste per Meal per Person
                                                                             		@break
                                                                             	@case(4)
-                                                                            		Highest plate waste per day ever
+                                                                            		Highest plate waste for 7 days ever
                                                                             		@break	
                                                                             	@case(5)
-                                                                            		Lowest plate waste per day ever
+                                                                            		Lowest plate waste for 7 day ever
                                                                             		@break
                                                                             @endswitch</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">@switch($i)
@@ -29,11 +29,11 @@
                                                                                     {{$platewaste->pluck('people')->sum()}}
                                                                                     @break 
                                                                             	@case(3)
-                                                                            	{{$platewaste->pluck('weight_kg')->sum()/$platewaste->pluck('people')->sum()}}
+                                                                            	{{round($platewaste->pluck('weight_kg')->sum()/$platewaste->pluck('people')->sum(),2)}}
                                                                             		kg
                                                                             		@break
                                                                             	@case(4)
-                                                                            		{{$platewaste->pluck('weight_kg')->sum()}} kg
+                                                                            		{{$platewaste->pluck('weight_kg')->max()}} kg
                                                                             		@break
                                                                             	@case(5)
                                                                             		{{$platewaste->pluck('weight_kg')->min()}} kg
