@@ -18,7 +18,7 @@ class NewsController extends Controller
 
 	public function index()
 	{
-		$news = News::with("user")->paginate(5);
+	    $news = News::with("user")->orderBy('created_at','desc')->paginate(5);
 		return view('pages.NewsTips', compact('news'));
 	}
 
@@ -36,14 +36,15 @@ class NewsController extends Controller
 	{
 	    
 	    $data = $request->all();
-		$news->fill($data);
+		
 		$news->user_id = Auth::id();
 		if ($request->image) {
 		    $result = $uploader->save($request->image, 'image', $news->id);
 		    if ($result) {
-		        $data['avatar'] = $result['path'];
+		        $data['image'] = $result['path'];
 		    }
 		}
+		$news->fill($data);
 		$news->save();
 		return redirect()->route('news.show', $news->id)->with('message', 'Created successfully.');
 	}
@@ -62,7 +63,7 @@ class NewsController extends Controller
 		if ($request->image) {
 		    $result = $uploader->save($request->image, 'image', $news->id);
 		    if ($result) {
-		        $data['avatar'] = $result['path'];
+		        $data['image'] = $result['path'];
 		    }
 		}
 		$news->update($data);
