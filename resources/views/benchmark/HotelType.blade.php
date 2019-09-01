@@ -7,10 +7,10 @@
 	    <h2 class="bold rating-header" style="">
 <!-- 	    <span class="selected-rating">0</span><small> / 5</small> -->
 <!-- 	    </h2> -->
-	    <button type="button" class="btnrating btn btn-outline-info" data-attr="1" id="hotel-type" onclick="chartChange({{$type_benchmark->get('business')}})">
+	    <button type="button" class="btn btn-outline-info" data-attr="1" id="hotel-type" onclick="chartChange({{$type_benchmark->get('business')}})">
 	        <i class="fa fa-briefcase" aria-hidden="true"> Business </i>
 	    </button>
-	    <button type="button" class="btnrating btn btn-outline-info" data-attr="2" id="hotel-type" onclick="chartChange({{$type_benchmark->get('leisure')}})">
+	    <button type="button" class="btn btn-outline-info" data-attr="2" id="hotel-type" onclick="chartChange({{$type_benchmark->get('leisure')}})">
 	        <i class="fa fa-cocktail" aria-hidden="true"> Leisure</i>
 	    </button>
 	    </button>
