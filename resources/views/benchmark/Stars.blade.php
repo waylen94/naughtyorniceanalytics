@@ -1,5 +1,9 @@
 <div class="form-group" id="rating-ability-wrapper">
-
+	<label class="control-label" for="rating">
+	    <span class="field-label-info"></span>
+	    <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+	    </label>
+	    
 	    <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1" onclick="chartChange({{$star_benchmark->get('one')}})">
 	        <i class="fa fa-star" aria-hidden="true"></i>
 	    </button>
