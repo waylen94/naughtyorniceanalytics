@@ -12,7 +12,7 @@ $news_items = $news->items()
 <!--                   <a class="text-white" href="#">40 Percent of People Can’t Afford Basics</a> -->
 <!--                </h6> -->
 <!--                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p> -->
-               <a class="btn btn-outline-light btn-sm" role="button" href="#">Continue reading</a>
+               <a class="btn btn-outline-light btn-sm" role="button" href="{{ route('news.show', [$news_items[0]->id]) }}">Continue reading</a>
             </div>
             <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail" src=
             @if($news_items[0]->image)
@@ -33,7 +33,7 @@ $news_items = $news->items()
 <!--                   <a class="text-white" href="#">Food for Thought: Diet and Brain Health</a> -->
 <!--                </h6> -->
 <!--                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p> -->
-               <a class="btn btn-outline-light btn-sm" href="#">Continue reading</a>
+               <a class="btn btn-outline-light btn-sm" href="{{ route('news.show', [$news_items[1]->id]) }}">Continue reading</a>
             </div>
             		            <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail" src=
             @if($news_items[1]->image)
@@ -63,7 +63,7 @@ $news_items = $news->items()
             <div class="card-body">
                <h5 class="card-title">{{$news_items[2]->title}}</h5>
 <!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-               <a href="#" class="btn btn-outline-dark btn-sm">Go somewhere</a>
+               <a href="{{ route('news.show', [$news_items[2]->id]) }}" class="btn btn-outline-dark btn-sm">Go somewhere</a>
             </div>
          </div>
       </div>
@@ -81,7 +81,7 @@ $news_items = $news->items()
             <div class="card-body">
                <h5 class="card-title">{{$news_items[3]->title}}</h5>
 <!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-               <a href="#" class="btn btn-outline-dark btn-sm">Go somewhere</a>
+               <a href="{{ route('news.show', [$news_items[3]->id]) }}" class="btn btn-outline-dark btn-sm">Go somewhere</a>
             </div>
          </div>
       </div>
@@ -99,7 +99,7 @@ $news_items = $news->items()
             <div class="card-body">
                <h5 class="card-title">{{$news_items[4]->title}}</h5>
 <!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-               <a href="#" class="btn btn-outline-dark btn-sm">Go somewhere</a>
+               <a href="{{ route('news.show', [$news_items[4]->id]) }}" class="btn btn-outline-dark btn-sm">Go somewhere</a>
             </div>
          </div>
       </div>
