@@ -88,42 +88,9 @@
                 </div>
             </div>
       
-              </div>
-              </div>
-              </div>
-<!--               <div class = "row"> -->
-	<!-- Benchmark Diagram -->
-<!--     	<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 benchmark-content"> -->
-<!--         	<div class ="container"> -->
-<!--          		<div class="card shadow mb-4"> -->
-<!--                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between"> -->
-<!--                       <p class="m-0 font-weight-bold text-primary">BenchMark Comparison</p> -->
-<!--                     </div> -->
-                    <!-- Actual analysis diagram -->
-<!--                     <div class="card-body"> -->
-<!--                       <div class="chart-area"> -->
-<!--                         <canvas id="benchmark-benchmark-canvas"></canvas> -->
-<!--                       </div> -->
-<!--                     </div> -->
-<!--                   </div> -->
-<!--                   </div> -->
-                  
-<!--            </div> -->
-              
-      <!-- precise plate -->
-<!--       <div class="col-lg-3 col-md-3 hidden-sm hidden-xs author-info"> -->
-<!--       <div class="card"> -->
-<!--               	<div class="row text-center"> -->
-<!--                 <div class="col"> -->
-<!--                     <h1>Having problems in inplementing improvements</h1> -->
-<!--                     <p> Feel free to leave us a message and get help. We will be providing you professional environmental solutions:)</p> -->
-<!--                     <p>Our feedback will be directly sent to your Email Address</p> -->
-<!--                 </div> -->
-<!--             </div> -->
-      
-<!--               </div> -->
-<!--               </div> -->
-<!--               </div> -->
+         </div>
+      </div>
+   </div>
         
               
    	<!-- Additional -->           
@@ -132,58 +99,12 @@
     </div>
     
     
-    <!--Additional Polarity Diagram -->
-<!--     <div class = "row"> -->
-	<!-- Benchmark Diagram -->
-<!--     	<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 benchmark-content"> -->
-<!--         	<div class ="container"> -->
-<!--          		<div class="card shadow mb-4"> -->
-<!--                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between"> -->
-<!--                       <p class="m-0 font-weight-bold text-primary">BenchMark Comparison</p> -->
-<!--                     </div> -->
-                    <!-- Actual analysis diagram -->
-<!--                     <div class="card-body"> -->
-<!--                       <div class="chart-area"> -->
-<!--                         <canvas id="benchmark-polarity-canvas"></canvas> -->
-<!--                       </div> -->
-<!--                     </div> -->
-<!--                   </div> -->
-<!--                   </div> -->
-                  
-<!--            </div> -->
-              
-      <!-- precise plate -->
-<!--       <div class="col-lg-3 col-md-3 hidden-sm hidden-xs author-info"> -->
-<!--       <div class="card"> -->
-<!--               	<div class="row text-center"> -->
-<!--                 <div class="col"> -->
-<!--                     <h1>Having problems in inplementing improvements</h1> -->
-<!--                     <p> Feel free to leave us a message and get help. We will be providing you professional environmental solutions:)</p> -->
-<!--                     <p>Our feedback will be directly sent to your Email Address</p> -->
-<!--                 </div> -->
-<!--             </div> -->
-      
-<!--               </div> -->
-<!--               </div> -->
-<!--               </div> -->
+
 </div>
 @stop
 
 
-@section('styles_editor')
-<style>
-<!--
-
--->
 
 
-</style>
-@stop
-
-@section("diagram_js_script")
-	<script>
-		
- 	</script>
-@stop
 
 
