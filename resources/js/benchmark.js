@@ -8,7 +8,7 @@ if(document.getElementById('benchmark-bar-canvas')){
 	      datasets: [
 	        {
 	          label: "Population (millions)",
-	          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+	          backgroundColor: ["#62f31a", "#18f11e","#15ef6a","#13edb7","#11d2eb","#0f81e9","#0c30e7","#360ae6","#8308e4","#d006e2","#e004a2","#de0250","#dc0100"],
 	          data: [2478,5267,734,784,433]
 	        }
 	      ]
@@ -29,7 +29,6 @@ window.chartChange =function chartChange(benchmark_list){
 		for (i = 0; i < benchmark_list.length; i++) {
 				hotel_list.push("H"+i);
 			}
-		
 		benchmark_bar_chart.data.labels = hotel_list;
 		benchmark_bar_chart.data.datasets[0].data = benchmark_list;
 		benchmark_bar_chart.update();

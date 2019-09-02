@@ -82579,7 +82579,7 @@ if (document.getElementById('benchmark-bar-canvas')) {
       labels: ["H1", "H2", "H3", "H4", "H5"],
       datasets: [{
         label: "Population (millions)",
-        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+        backgroundColor: ["#62f31a", "#18f11e", "#15ef6a", "#13edb7", "#11d2eb", "#0f81e9", "#0c30e7", "#360ae6", "#8308e4", "#d006e2", "#e004a2", "#de0250", "#dc0100"],
         data: [2478, 5267, 734, 784, 433]
       }]
     },

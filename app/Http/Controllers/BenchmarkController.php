@@ -11,15 +11,16 @@ class BenchmarkController extends Controller
     public function dailybenchmark(User $user)
     {
         function benchamrk_dataset_join($user, $collection){
-
-                $performance = round($user->hotel->platewaste->take(7)->pluck('weight_kg')->avg(),2);
+            $user = $user->hotel->platewaste->take(1);
+                $performance = round(($user->pluck('weight_kg')->sum()/$user->pluck("people")->sum()),2);
                 
-                return $collection->prepend($performance);
+                return $collection->prepend($performance)->sort()->values();
         }
         
         function platewaste_statistics($hotel_data){
             return $hotel_data->map(function ($item, $key) {
-                return $item->platewaste->take(1)->pluck('weight_kg')->avg();
+                $item = $item->platewaste->take(1);
+                return round(($item->pluck('weight_kg')->sum())/($item->pluck("people")->sum()),2);
             });
         }
         
@@ -111,14 +112,16 @@ class BenchmarkController extends Controller
             function benchamrk_dataset($user, $collection){
 
 
-             $performance = round($user->hotel->platewaste->take(7)->pluck('weight_kg')->avg(),2);
+                $user = $user->hotel->platewaste->take(7);
+                $performance = round(($user->pluck('weight_kg')->sum()/$user->pluck("people")->sum()),2);
                     
-             return $collection->prepend($performance);
+             return $collection->prepend($performance)->sort()->values();
             }
             
             function platewaste_statistics($hotel_data){
                 return $hotel_data->map(function ($item, $key) {
-                    return $item->platewaste->take(7)->pluck('weight_kg')->avg();
+                    $item = $item->platewaste->take(7);
+                    return round(($item->pluck('weight_kg')->sum())/($item->pluck("people")->sum()),2);
                 });
             }
             
@@ -207,14 +210,16 @@ class BenchmarkController extends Controller
         public function monthlybenchmark(User $user)
         {
             function benchamrk_dataset($user, $collection){
-                $performance = round($user->hotel->platewaste->take(7)->pluck('weight_kg')->avg(),2);
+                $user = $user->hotel->platewaste->take(30);
+                $performance = round(($user->pluck('weight_kg')->sum()/$user->pluck("people")->sum()),2);
                 
-                return $collection->prepend($performance);
+                return $collection->prepend($performance)->sort()->values();
             }
             
             function platewaste_statistics($hotel_data){
                 return $hotel_data->map(function ($item, $key) {
-                    return $item->platewaste->take(31)->pluck('weight_kg')->avg();
+                    $item = $item->platewaste->take(30);
+                    return round(($item->pluck('weight_kg')->sum())/($item->pluck("people")->sum()),2);
                 });
             }
             
@@ -303,14 +308,16 @@ class BenchmarkController extends Controller
         public function yearlybenchmark(User $user)
         {
             function benchamrk_dataset($user, $collection){
-                $performance = round($user->hotel->platewaste->take(7)->pluck('weight_kg')->avg(),2);
+                $user = $user->hotel->platewaste->take(365);
+                $performance = round(($user->pluck('weight_kg')->sum()/$user->pluck("people")->sum()),2);
                 
-                return $collection->prepend($performance);
+                return $collection->prepend($performance)->sort()->values();
             }
             
             function platewaste_statistics($hotel_data){
                 return $hotel_data->map(function ($item, $key) {
-                    return $item->platewaste->take(365)->pluck('weight_kg')->avg();
+                    $item = $item->platewaste->take(365);
+                    return round(($item->pluck('weight_kg')->sum())/($item->pluck("people")->sum()),2);
                 });
             }
             
