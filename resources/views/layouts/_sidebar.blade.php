@@ -26,10 +26,21 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="{{route('benchmark', Auth::id())}}">
+       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
           <span>Benchmark</span>
         </a>
+
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Benchmark Components:</h6>
+            <a class="collapse-item" href="{{route('benchmark', Auth::id())}}">Dayly Benchmark</a>
+            <a class="collapse-item" href="{{route('benchmark', Auth::id())}}">Weekly Benchamrk</a>
+            <a class="collapse-item" href="{{route('benchmark', Auth::id())}}">Monthly Benchamrk</a>
+            <a class="collapse-item" href="{{route('benchmark', Auth::id())}}">Yearly Benchamrk</a>
+            
+          </div>
+        </div>
       </li>
 
 

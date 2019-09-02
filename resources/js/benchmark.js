@@ -1,3 +1,30 @@
+
+if(document.getElementById('benchmark-bar-canvas')){
+	new Chart(document.getElementById("benchmark-bar-canvas"), {
+	    type: 'bar',
+	    data: {
+	      labels: ["H1", "H2", "H3", "H4", "H5"],
+	      datasets: [
+	        {
+	          label: "Population (millions)",
+	          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+	          data: [2478,5267,734,784,433,555,116,555,999,888,745,506,1234,456,1231]
+	        }
+	      ]
+	    },
+	    options: {
+	      legend: { display: false },
+	      title: {
+	        display: false,
+	        text: 'Predicted world population (millions) in 2050'
+	      }
+	    }
+	});
+	
+	
+};
+
+
 if(document.getElementById('benchmark-benchmark-canvas')){
 	
 	var ctx = document.getElementById('benchmark-benchmark-canvas').getContext('2d');

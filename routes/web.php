@@ -17,7 +17,12 @@ Route::get('/account/{user}', 'PagesController@account')->name('account');//acco
 Route::get('/analytics/{user}', 'PagesController@analytics')->name('analytics');//analytics
 Route::get('/contact/{user}', 'PagesController@contact')->name('contact');//contact
 Route::get('/newsshow/{user}', 'PagesController@news')->name('newsshow');//news
-Route::get('/benchmark/{user}', 'PagesController@benchmark')->name('benchmark');//news
+Route::get('/benchmark/{user}', 'PagesController@benchmark')->name('benchmark');//benchmark
+
+Route::get('/benchmark/{user}/daily', 'BenchmarkController@dailybenchmark')->name('benchmark.daily');//benchmark
+Route::get('/benchmark/{user}/weekly', 'BenchmarkController@weeklybenchmark')->name('benchmark.weekly');//benchmark
+Route::get('/benchmark/{user}/monthly', 'BenchmarkController@monthlybenchmark')->name('benchmark.monthly');//benchmark
+Route::get('/benchmark/{user}/yearly', 'BenchmarkController@yearlybenchmark')->name('benchmark.yearly');//benchmark
 
 
 Route::get('testingtable', 'TestingController@showTable')->name('testing.table'); //testing table
