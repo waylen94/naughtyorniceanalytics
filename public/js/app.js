@@ -82611,13 +82611,14 @@ window.chartChange = function chartChange(benchmark_list) {
   var hotel_list = [];
   var average = 0;
   var average_list = [];
-  var index = benchmark_list.indexOf(benchmark_list[0], 1);
+  var my_hotel_performance = benchmark_list.pop();
+  var index = benchmark_list.indexOf(my_hotel_performance);
   var rgb_record = benchmark_bar_chart.data.datasets[0].borderColor[index];
   benchmark_list.forEach(list_plus);
   average = (average / benchmark_list.length).toFixed(2);
 
   if (benchmark_list != null) {
-    for (i = 1; i < benchmark_list.length; i++) {
+    for (i = 0; i < benchmark_list.length; i++) {
       hotel_list.push("H" + i);
       average_list.push(average);
     }
