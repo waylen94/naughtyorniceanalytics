@@ -82610,12 +82610,14 @@ if (document.getElementById('benchmark-bar-canvas')) {
 window.chartChange = function chartChange(benchmark_list) {
   var hotel_list = [];
   var average = 0;
-  var average_list = [];
-  var my_hotel_performance = benchmark_list.pop();
-  var index = benchmark_list.indexOf(my_hotel_performance);
-  var rgb_record = benchmark_bar_chart.data.datasets[0].borderColor[index];
+  var average_list = []; //capture the redundant first my hotel item
+
+  var my_hotel_performance = benchmark_list[0];
+  benchmark_list.splice(0, 1);
   benchmark_list.forEach(list_plus);
   average = (average / benchmark_list.length).toFixed(2);
+  var index = benchmark_list.indexOf(my_hotel_performance);
+  var rgb_record = benchmark_bar_chart.data.datasets[0].borderColor[index];
 
   if (benchmark_list != null) {
     for (i = 0; i < benchmark_list.length; i++) {
