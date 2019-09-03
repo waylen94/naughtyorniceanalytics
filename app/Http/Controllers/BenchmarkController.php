@@ -12,9 +12,9 @@ class BenchmarkController extends Controller
     {
         function benchamrk_dataset_join($user, $collection){
             $user = $user->hotel->platewaste->take(1);
-                $performance = round(($user->pluck('weight_kg')->sum()/$user->pluck("people")->sum()),2);
+            $performance = round(($user->pluck('weight_kg')->sum()/$user->pluck("people")->sum()),2);
                 
-                return $collection->prepend($performance)->sort()->values();
+            return $collection->prepend($performance)->sort()->values()->prepend($performance);
         }
         
         function platewaste_statistics($hotel_data){
@@ -105,7 +105,7 @@ class BenchmarkController extends Controller
         
         
         
-        return view('pages.Benchmark', compact('user','performance','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+        return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
     }
         
         
@@ -206,7 +206,7 @@ class BenchmarkController extends Controller
             ]);
             
             
-            return view('pages.Benchmark', compact('user','performance','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+            return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
         }
         
         public function monthlybenchmark(User $user)
@@ -304,7 +304,7 @@ class BenchmarkController extends Controller
             ]);
             
             
-            return view('pages.Benchmark', compact('user','performance','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+            return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
         }
         
         public function yearlybenchmark(User $user)
@@ -402,7 +402,7 @@ class BenchmarkController extends Controller
             ]);
             
             
-            return view('pages.Benchmark', compact('user','performance','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+            return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
         }
         
         
