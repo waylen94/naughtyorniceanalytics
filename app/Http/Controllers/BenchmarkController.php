@@ -1,5 +1,5 @@
 <?php
-
+//color scheme https://www.colorhexa.com/62f31a-to-dc0100
 namespace App\Http\Controllers;
 
 use App\Models\Hotel;
@@ -103,7 +103,9 @@ class BenchmarkController extends Controller
         ]);
         
         
-        return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+        
+        
+        return view('pages.Benchmark', compact('user','performance','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
     }
         
         
@@ -204,7 +206,7 @@ class BenchmarkController extends Controller
             ]);
             
             
-            return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+            return view('pages.Benchmark', compact('user','performance','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
         }
         
         public function monthlybenchmark(User $user)
@@ -302,7 +304,7 @@ class BenchmarkController extends Controller
             ]);
             
             
-            return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+            return view('pages.Benchmark', compact('user','performance','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
         }
         
         public function yearlybenchmark(User $user)
@@ -400,7 +402,7 @@ class BenchmarkController extends Controller
             ]);
             
             
-            return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+            return view('pages.Benchmark', compact('user','performance','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
         }
         
         
