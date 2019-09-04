@@ -94,6 +94,7 @@ window.chartChange =function chartChange(benchmark_list){
 		benchmark_bar_chart.data.labels[index] = "Your Hotel";
 		var record_origin_color = benchmark_bar_chart.data.datasets[0].backgroundColor[index]
 		benchmark_bar_chart.data.datasets[0].backgroundColor[index] = rgb_record;
+		
 		benchmark_bar_chart.update();
 		benchmark_bar_chart.data.datasets[0].backgroundColor[index] = record_origin_color;
 		}
