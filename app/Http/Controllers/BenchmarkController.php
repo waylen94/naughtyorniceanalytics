@@ -117,7 +117,7 @@ class BenchmarkController extends Controller
                 $user = $user->hotel->platewaste->take(7);
                 $performance = round(($user->pluck('weight_kg')->sum()/$user->pluck("people")->sum()),2);
                     
-             return $collection->prepend($performance)->sort()->values();
+                return $collection->prepend($performance)->sort()->values()->prepend($performance);
             }
             
             function platewaste_statistics($hotel_data){
@@ -215,7 +215,7 @@ class BenchmarkController extends Controller
                 $user = $user->hotel->platewaste->take(30);
                 $performance = round(($user->pluck('weight_kg')->sum()/$user->pluck("people")->sum()),2);
                 
-                return $collection->prepend($performance)->sort()->values();
+                return $collection->prepend($performance)->sort()->values()->prepend($performance);
             }
             
             function platewaste_statistics($hotel_data){
@@ -313,7 +313,7 @@ class BenchmarkController extends Controller
                 $user = $user->hotel->platewaste->take(365);
                 $performance = round(($user->pluck('weight_kg')->sum()/$user->pluck("people")->sum()),2);
                 
-                return $collection->prepend($performance)->sort()->values();
+                return $collection->prepend($performance)->sort()->values()->prepend($performance);
             }
             
             function platewaste_statistics($hotel_data){
