@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -30,7 +31,7 @@ class AuthServiceProvider extends ServiceProvider
         //
         \admin::auth(function ($request) {
             // whether is founder
-            return \Auth::user()->hasRole('Founder');
+            return Auth::user()->hasRole('Founder');
         });
     }
 }
