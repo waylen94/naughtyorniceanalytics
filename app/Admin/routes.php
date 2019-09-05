@@ -13,5 +13,8 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('admin.home');
     
     $router->resource('users', 'UsersController');
+    $router->resource('hotels', 'HotelsController');
+    $router->resource('news','NewsController');
+    
 
 });
