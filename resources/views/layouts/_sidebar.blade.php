@@ -79,6 +79,12 @@
           <i class="fas fa-fw fa-table"></i>
           <span>Testing fake statistics</span></a>
       </li>
+      
+            <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin.home') }}">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Administration</span></a>
+      </li>
 		
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
