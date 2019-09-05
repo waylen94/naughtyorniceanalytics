@@ -29,9 +29,6 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         //
-        \admin::auth(function ($request) {
-            // whether is founder
-            return Auth::user()->hasRole('Founder');
-        });
+
     }
 }
