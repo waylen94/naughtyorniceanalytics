@@ -15,6 +15,8 @@ Route::group([
     $router->resource('users', 'UsersController');
     $router->resource('hotels', 'HotelsController');
     $router->resource('news','NewsController');
+    $router->resource('platewastes', 'PlatewastesController');
+    
     
 
 });
