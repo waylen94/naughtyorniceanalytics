@@ -3,6 +3,7 @@
 namespace App\Handlers;
 
 use  Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class ImageUploadHandler
 {
@@ -36,6 +37,18 @@ class ImageUploadHandler
         
         return [
             'path' => config('app.url') . "/$folder_name/$filename"
+        ];
+    }
+    
+    public function save_s3($file, $folder, $file_prefix)
+    {
+        
+        
+        $path = Storage::disk('s3')->put('images/originals', $file);
+        
+        $path = Storage::disk('s3')->url($path);
+        return [
+            'path' => $path
         ];
     }
 }

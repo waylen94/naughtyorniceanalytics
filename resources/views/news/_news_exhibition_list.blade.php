@@ -16,7 +16,7 @@ $news_items = $news->items()
             </div>
             <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail" src=
             @if($news_items[0]->image)
-            "http://placeimg.com/480/360/any"
+			"{{$news_items[0]->image}}"
             @else
             "http://placeimg.com/480/360/any"
             @endif
@@ -37,7 +37,7 @@ $news_items = $news->items()
             </div>
             		            <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail" src=
             @if($news_items[1]->image)
-            "http://placeimg.com/480/360/any"
+            "{{$news_items[1]->image}}"
             @else
             "http://placeimg.com/480/360/any"
             @endif
@@ -54,8 +54,8 @@ $news_items = $news->items()
       <div class="col-md-4">
          <div class="card mb-4">
             <img class="card-img-top" src=
-            @if($news_items[1]->image)
-            "http://placeimg.com/480/360/any"
+            @if($news_items[2]->image)
+            "{{$news_items[2]->image}}"
             @else
             "http://placeimg.com/480/360/any"
             @endif
@@ -73,7 +73,7 @@ $news_items = $news->items()
          <div class="card mb-4">
             <img class="card-img-top" src=
             @if($news_items[3]->image)
-            "http://placeimg.com/480/360/any"
+            "{{$news_items[3]->image}}"
             @else
             "http://placeimg.com/480/360/any"
             @endif
@@ -91,7 +91,7 @@ $news_items = $news->items()
          <div class="card mb-4">
             <img class="card-img-top" src=
             @if($news_items[4]->image)
-            "http://placeimg.com/480/360/any"
+            "{{$news_items[4]->image}}"
             @else
             "http://placeimg.com/480/360/any"
             @endif

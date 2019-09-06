@@ -39,7 +39,7 @@ class NewsController extends Controller
 		
 		$news->user_id = Auth::id();
 		if ($request->image) {
-		    $result = $uploader->save($request->image, 'image', $news->id);
+		    $result = $uploader->save_s3($request->image, 'image', $news->id);
 		    if ($result) {
 		        $data['image'] = $result['path'];
 		    }
@@ -61,7 +61,7 @@ class NewsController extends Controller
 		
 		$data = $request->all();
 		if ($request->image) {
-		    $result = $uploader->save($request->image, 'image', $news->id);
+		    $result = $uploader->save_s3($request->image, 'image', $news->id);
 		    if ($result) {
 		        $data['image'] = $result['path'];
 		    }
