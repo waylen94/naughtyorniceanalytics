@@ -57,7 +57,7 @@
       <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('contact', Auth::id())}}">
-          <i class="fas fa-fw fa-wrench"></i>
+          <i class="fas fa-fw fa-phone"></i>
           <span>Contact</span>
         </a>
      
@@ -76,7 +76,7 @@
       
                   <li class="nav-item">
         <a class="nav-link" href="{{ route('admin.home') }}">
-          <i class="fas fa-fw fa-table"></i>
+          <i class="fas fa-fw fa-users-cog"></i>
           <span>Administration</span></a>
       </li>
       @endauth

@@ -19,7 +19,7 @@
                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 homepage-left">
                             <div class="homepage_first_div_top">   
                                 <h1 class ="display-1">Naughty or Nice ?</h1>
-                                <p>Establish a daily benchamrk through statistics to keep track of your environmental performance.</p>
+                                <p>Establish a daily benchmark through statistics to keep track of your environmental performance.</p>
                                 @auth
                                 <a href="{{ route('dashboard', Auth::id()) }}" class="btn btn-success">My Performance</a>
                                 @else

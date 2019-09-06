@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Benchmark')
 
-@section('header', 'Benchmark')
+@section('header', 'Benchmark By')
 
 @section('content')
 <div class="container-fluid">
