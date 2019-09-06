@@ -8,16 +8,16 @@
                                                                                     @break
                                                                             
                                                                                 @case(2)
-                                                                                    Total number of Dinners for Seven Days
+                                                                                    Total number of Diners for Seven Days
                                                                                     @break
                                                                             	@case(3)
                                                                             		Plate Waste per Meal per Person
                                                                             		@break
                                                                             	@case(4)
-                                                                            		Highest plate waste for 7 days ever
+                                                                            		Highest Plate Waste per Meal per Person
                                                                             		@break	
                                                                             	@case(5)
-                                                                            		Lowest plate waste for 7 day ever
+                                                                            		Lowest Plate Waste per Meal per Person
                                                                             		@break
                                                                             @endswitch</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">@switch($i)
@@ -29,7 +29,7 @@
                                                                                     {{$platewaste->pluck('people')->sum()}}
                                                                                     @break 
                                                                             	@case(3)
-                                                                            	{{round($platewaste->pluck('weight_kg')->sum()/$platewaste->pluck('people')->sum(),2)}}
+                                                                            	{{round($platewaste->pluck('weight_kg')->sum(),2)}}
                                                                             		kg
                                                                             		@break
                                                                             	@case(4)

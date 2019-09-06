@@ -23,6 +23,9 @@ class PagesController extends Controller
         if(!$user->Hotel()->get()->isEmpty()){
             
             $platewaste = $user->Hotel->platewaste->take(7);
+            $platewaste->each(function ($item, $key) {
+                $item->weight_kg/$item->people;
+            });
             return view('pages.Dashboard',compact('user','platewaste'));
         }else{
             
