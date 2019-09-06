@@ -26,7 +26,11 @@ class BenchmarkController extends Controller
         function platewaste_statistics($hotel_data){
             return $hotel_data->map(function ($item, $key) {
                 $item = $item->platewaste->take(1);
-                return round(($item->pluck('weight_kg')->sum())/($item->pluck("people")->sum()),2);
+                if(($item->pluck("people")->sum()!=0)){
+                    return round(($item->pluck('weight_kg')->sum())/($item->pluck("people")->sum()),2);
+                }else{
+                    return 0;
+                }
             });
         }
         
