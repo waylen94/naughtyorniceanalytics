@@ -20,13 +20,15 @@ class PagesController extends Controller
     
     public function dashboard(User $user)
     {
+        $dashboard_collection = collect([]);
         if(!$user->Hotel()->get()->isEmpty()){
-            
+           
             $platewaste = $user->Hotel->platewaste->take(7);
-            $platewaste->each(function ($item, $key) {
-                $item->weight_kg/$item->people;
-            });
-            return view('pages.Dashboard',compact('user','platewaste'));
+            
+            $dashboard_collection->push($platewaste->each(function ($item, $key) {
+                return(($item->first()->weight_kg)/($item->first()->people));
+            }));
+            return view('pages.Dashboard',compact('user','platewaste','dashboard_collection'));
         }else{
             
             return view('pages.Contact', compact('user'));

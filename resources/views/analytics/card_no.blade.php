@@ -22,14 +22,14 @@
                                                                             @endswitch</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">@switch($i)
                                                                                 @case(1)
-                                                                                    {{$platewaste->sum()}} kg
+                                                                                    {{$platewaste->pluck('weight_kg')->sum()}} kg
                                                                                     @break
                                                                             
                                                                                 @case(2)
                                                                                     {{$platewaste->pluck('people')->sum()}}
                                                                                     @break 
                                                                             	@case(3)
-                                                                            	{{round($platewaste->pluck('weight_kg')->sum(),2)}}
+                                                                            	{{round($platewaste->pluck('weight_kg')->sum()/$platewaste->pluck('people')->sum(),2)}}
                                                                             		kg
                                                                             		@break
                                                                             	@case(4)
