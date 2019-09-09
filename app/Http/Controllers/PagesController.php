@@ -25,9 +25,10 @@ class PagesController extends Controller
            
             $platewaste = $user->Hotel->platewaste->take(7);
             
-            $dashboard_collection->push($platewaste->each(function ($item, $key) {
-                return(($item->first()->weight_kg)/($item->first()->people));
-            }));
+            $dashboard_collection = $platewaste->map(function ($item, $key) {
+                return round((($item->weight_kg)/($item->people)),2);
+            });
+            
             return view('pages.Dashboard',compact('user','platewaste','dashboard_collection'));
         }else{
             

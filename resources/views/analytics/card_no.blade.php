@@ -33,10 +33,10 @@
                                                                             		kg
                                                                             		@break
                                                                             	@case(4)
-                                                                            		{{$platewaste->pluck('weight_kg')->max()}} kg
+                                                                            		{{$dashboard_collection->max()}} kg
                                                                             		@break
                                                                             	@case(5)
-                                                                            		{{$platewaste->pluck('weight_kg')->min()}} kg
+                                                                            		{{$dashboard_collection->min()}} kg
                                                                             		@break
                                                                             @endswitch</div>
                     </div>

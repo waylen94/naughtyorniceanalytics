@@ -238,25 +238,33 @@ window.chartChange =function chartChange(benchmark_list){
 	
 	var index = benchmark_list.indexOf(my_hotel_performance);
 	var rgb_record = benchmark_bar_chart.data.datasets[0].borderColor[index];
-	
+	var color_devised_list = [];
 	
 	
 	if(benchmark_list != null){
 		for (i = 0; i < benchmark_list.length; i++) {
 				hotel_list.push("H"+i);
 				average_list.push(average);
+				if(benchmark_list[i]<average){
+					color_devised_list.push('rgba(98, 243, 26, 0.5)');//red
+				}else{
+					color_devised_list.push('rgba(220, 1, 0, 0.5)');		//green		
+					}
 			}	
+		
+		//teminate initializing the predefined color scheme
+		
 		benchmark_bar_chart.data.labels = hotel_list;
 		benchmark_bar_chart.data.datasets[0].data = benchmark_list;
 		benchmark_bar_chart.data.datasets[1].data = average_list;
-//		benchmark_bar_chart.data.datasets[0].backgroundColor = color_list_generation(benchmark_list.length,false);
+		benchmark_bar_chart.data.datasets[0].backgroundColor = color_devised_list; // render the dynamic polarity color
 //		benchmark_bar_chart.data.datasets[0].borderColor = color_list_generation(benchmark_list.length,true);
 		benchmark_bar_chart.data.labels[index] = "Your Hotel";
-		var record_origin_color = benchmark_bar_chart.data.datasets[0].backgroundColor[index]
-		benchmark_bar_chart.data.datasets[0].backgroundColor[index] = rgb_record;
+//		var record_origin_color = benchmark_bar_chart.data.datasets[0].backgroundColor[index]
+		benchmark_bar_chart.data.datasets[0].backgroundColor[index] = 'rgba(0,0,0,0.7)';//self hotel black 0.7 opacity
 		
 		benchmark_bar_chart.update();
-		benchmark_bar_chart.data.datasets[0].backgroundColor[index] = record_origin_color;
+//		benchmark_bar_chart.data.datasets[0].backgroundColor[index] = record_origin_color;
 		}
 	
 	function list_plus(list){
