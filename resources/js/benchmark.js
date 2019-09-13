@@ -158,9 +158,12 @@ return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 
 // benchmark bar chart render
 if(document.getElementById('benchmark-bar-canvas')){
+	
 	var ctx = document.getElementById('benchmark-bar-canvas').getContext('2d');
+	
 	var benchmark_bar_chart = new Chart(ctx, {
 	    type: 'bar',
+	    
 	    data: {
 	      labels: ["H1", "H2", "H3", "H4", "H5"],
 	      datasets: [
@@ -184,19 +187,6 @@ if(document.getElementById('benchmark-bar-canvas')){
 
 	            ],
 	            borderColor: [
-	                'rgba(98, 243, 26, 1)',
-	                'rgba(24, 241, 30, 1)',
-	                'rgba(21, 239, 106, 1)',
-	                'rgba(19, 237, 183, 1)',
-	                'rgba(17, 210, 235, 1)',
-	                'rgba(15, 129, 233, 1)',
-	                'rgba(12, 48, 231, 1)',
-	                'rgba(54, 10, 230, 1)',
-	                'rgba(131, 8, 228, 1)',
-	                'rgba(208, 6, 226, 1)',
-	                'rgba(224, 4, 162, 1)',
-	                'rgba(222, 2, 8, 1)',
-	                'rgba(220, 1, 0, 1)'
 
 	            ],
 	            borderWidth: 1,
@@ -212,10 +202,13 @@ if(document.getElementById('benchmark-bar-canvas')){
 	      ]
 	    },
 	    options: {
-	      legend: { display: false },
+	    	
+	    	legend: {
+	    	},
 	      title: {
-	        display: false,
-	        text: 'Predicted world population (millions) in 2050'
+	    	  display: true,
+	            position: 'left',
+	            text:'Plate Waste per Person per Meal',
 	      }
 	    }
 	});
