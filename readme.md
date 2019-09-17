@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-##Website Gallery
+## Website Gallery
 ![gif_diagram](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/web_gif.gif)
 
 #### Homepage
