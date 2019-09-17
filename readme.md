@@ -7,10 +7,10 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-<p align="center">![gif_diagram](https://raw.githubusercontent.com/waylen94/resume/master/resume001/web_gif.gif)</p>
+<p align="center">![gif_diagram](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/web_gif.gif)</p>
 
 #### Homepage
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Home_page.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Home_page.png)
 
 #### Login page
 ![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Login_page.png)
@@ -19,58 +19,58 @@
 ![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Active_page.png)
 
 #### Testing page
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Testing_page.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Testing_page.png)
 
 #### Dashboard 
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Dashboard.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Dashboard.png)
 
 #### Benchmark sidebar
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Benchmark_sidebar.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Benchmark_sidebar.png)
 
 #### Benchmark selection
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Benchmark_selection.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Benchmark_selection.png)
 
 #### Benchamrk selection
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Benchmark_selection-2.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Benchmark_selection-2.png)
 
 #### News and Tips
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/News_tips.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/News_tips.png)
 
 #### News editor
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/News_editor.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/News_editor.png)
 
 #### News editor process
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/News_editor_procedure.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/News_editor_procedure.png)
 
 #### News and Tips
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/News_display.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/News_display.png)
 
 #### Contact 1
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Contact.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Contact.png)
 
 #### Contact 2
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Contact2.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Contact2.png)
 
 #### User page
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/User_page.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/User_page.png)
 
 #### Admin
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Admin.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Admin.png)
 
 #### Admin Hotels
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Admin_hotel.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Admin_hotel.png)
 
 #### Admin News
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Admin_news.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Admin_news.png)
 
 #### Admin Platewaste
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Admin_platewaste.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Admin_platewaste.png)
 
 #### Admin Creator
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Admin_creator.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Admin_creator.png)
 
 #### Admin Editor
-![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Admin_editor.png)
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Admin_editor.png)
 
 
 
