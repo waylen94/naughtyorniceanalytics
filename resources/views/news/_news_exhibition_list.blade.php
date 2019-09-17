@@ -42,7 +42,7 @@ $news_items = $news->items()
             "http://placeimg.com/480/360/any"
             @endif
             style="width: 200px; height: 250px;">
-            
+
                </div>
       </div>
       @endif
@@ -105,9 +105,9 @@ $news_items = $news->items()
       </div>
       @endif
    </div>
-   
+
 
 
 @else
-  <div class="empty-block">暂无数据 ~_~ </div>
+  <div class="empty-block">No DATA ~_~ </div>
 @endif

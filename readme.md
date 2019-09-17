@@ -7,61 +7,72 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+<p align="center">![gif_diagram](https://raw.githubusercontent.com/waylen94/resume/master/resume001/web_gif.gif)</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#### Homepage
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Home_page.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+#### Login page
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Login_page.png)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### Active page
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Active_page.png)
 
-## Learning Laravel
+#### Testing page
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Testing_page.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### Dashboard 
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Dashboard.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1400 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Benchmark sidebar
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Benchmark_sidebar.png)
 
-## Laravel Sponsors
+#### Benchmark selection
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Benchmark_selection.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+#### Benchamrk selection
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Benchmark_selection-2.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+#### News and Tips
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/News_tips.png)
 
-## Contributing
+#### News editor
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/News_editor.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+#### News editor process
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/News_editor_procedure.png)
+
+#### News and Tips
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/News_display.png)
+
+#### Contact 1
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Contact.png)
+
+#### Contact 2
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Contact2.png)
+
+#### User page
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/User_page.png)
+
+#### Admin
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Admin.png)
+
+#### Admin Hotels
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Admin_hotel.png)
+
+#### Admin News
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Admin_news.png)
+
+#### Admin Platewaste
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Admin_platewaste.png)
+
+#### Admin Creator
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Admin_creator.png)
+
+#### Admin Editor
+![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/Admin_editor.png)
+
+
 
 ## Security Vulnerabilities
 
