@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-<p align="center"><a href="https://travis-ci.org/laravel/framework"><img src=https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/web_gif.gif" alt="Build Status"></a></p>
+![gif_diagram](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/web_gif.gif" alt="Build Status")
 
 #### Homepage
 ![homepage](https://raw.githubusercontent.com/waylen94/resume/master/resume001/project_image/Home_page.png)
