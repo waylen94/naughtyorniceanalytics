@@ -38,9 +38,9 @@
   
 
   <!-- Scripts -->
-  @yield('diagram_js_script')
+  @yield('diagram_js_script1')
   <script src="{{ mix('js/app.js') }}"></script>
-  
+    @yield('diagram_js_script')
    @yield('scripts_editor')
    
    

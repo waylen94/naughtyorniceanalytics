@@ -35,11 +35,12 @@
 	<!-- ending for the row -->
 </div>
 
-@section("diagram_js_script")
+@section("diagram_js_script1")
 	<script>
 		var json_data_benchmark_date = ['08-May', '09-May', '10-May','11-May', '12-May','13-May', '14-May'];
 		console.log(json_data_benchmark_date);
 		var json_data_benchmark_data =  {{ $dashboard_collection->toJson(JSON_PRETTY_PRINT) }} ;
+		
  	</script>
 @stop
 

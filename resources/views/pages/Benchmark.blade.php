@@ -14,8 +14,11 @@
         
         	<div class="row">
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                       <li class="nav-item">
+                        <a class="nav-link active" id="all-tab" data-toggle="pill" href="#all" role="tab" aria-controls="all" aria-selected="true" onclick="chartChange({{$all_benchmark['all']}})">All</a>
+                      </li>
                       <li class="nav-item">
-                        <a class="nav-link active" id="stars-tab" data-toggle="pill" href="#stars" role="tab" aria-controls="stars" aria-selected="true">Stars</a>
+                        <a class="nav-link" id="stars-tab" data-toggle="pill" href="#stars" role="tab" aria-controls="stars" aria-selected="true">Stars</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" id="room-tab" data-toggle="pill" href="#room" role="tab" aria-controls="room" aria-selected="false">Room Number</a>
@@ -29,7 +32,13 @@
                     </ul>
 			</div>
 			<div class="tab-content" id="pills-tabContent">
-			<div class="tab-pane fade show active" id="stars" role="tabpanel" aria-labelledby="stars-tab">
+			<div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+				<div class="benchmark-filter-item">
+				<div class="form-group" id="rating-ability-wrapper">
+				</div>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="stars" role="tabpanel" aria-labelledby="stars-tab">
 				<div class="benchmark-filter-item">
 				@include('benchmark.Stars')
 				</div>
@@ -101,6 +110,15 @@
     
 
 </div>
+@stop
+
+@section("diagram_js_script")
+	<script>
+		var json_data_benchmark_date = ['08-May', '09-May', '10-May','11-May', '12-May','13-May', '14-May'];
+		console.log(json_data_benchmark_date);
+		chartChange({{$all_benchmark['all']}});
+		
+ 	</script>
 @stop
 
 

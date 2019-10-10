@@ -111,8 +111,13 @@ class BenchmarkController extends Controller
         
         
         
+        //all hotel
+        $all_hotel = Hotel::all();
+        //all hotel benchmark
+        $all_hotel_statistics = platewaste_statistics($all_hotel);
+        $all_benchmark = collect(['all'=>benchamrk_dataset_join($user, $all_hotel_statistics)]);
         
-        return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+        return view('pages.Benchmark', compact('user','all_benchmark','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
     }
         
         
@@ -216,8 +221,12 @@ class BenchmarkController extends Controller
                 'business'=>benchamrk_dataset($user, $business_hotel_statistics)
             ]);
             
-            
-            return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+            //all hotel
+            $all_hotel = Hotel::all();
+            //all hotel benchmark
+            $all_hotel_statistics = platewaste_statistics($all_hotel);
+            $all_benchmark = collect(['all'=>benchamrk_dataset($user, $all_hotel_statistics)]);
+            return view('pages.Benchmark', compact('user','all_benchmark','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
         }
         
         public function monthlybenchmark(User $user)
@@ -318,8 +327,12 @@ class BenchmarkController extends Controller
                 'business'=>benchamrk_dataset($user, $business_hotel_statistics)
             ]);
             
-            
-            return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+            //all hotel
+            $all_hotel = Hotel::all();
+            //all hotel benchmark
+            $all_hotel_statistics = platewaste_statistics($all_hotel);
+            $all_benchmark = collect(['all'=>benchamrk_dataset($user, $all_hotel_statistics)]);
+            return view('pages.Benchmark', compact('user','all_benchmark','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
         }
         
         public function yearlybenchmark(User $user)
@@ -419,9 +432,13 @@ class BenchmarkController extends Controller
                 'leisure'=>benchamrk_dataset($user, $leisure_hotel_statistics),
                 'business'=>benchamrk_dataset($user, $business_hotel_statistics)
             ]);
+            //all hotel
+            $all_hotel = Hotel::all();
+            //all hotel benchmark
+            $all_hotel_statistics = platewaste_statistics($all_hotel);
+            $all_benchmark = collect(['all'=>benchamrk_dataset($user, $all_hotel_statistics)]);
             
-            
-            return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+            return view('pages.Benchmark', compact('user','all_benchmark','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
         }
         
         
@@ -475,6 +492,8 @@ class BenchmarkController extends Controller
             $business_hotel = Hotel::where('style','Business')->get();
             $leisure_hotel = Hotel::where('style','Leisure')->get();
             
+            //all hotel
+            $all_hotel = Hotel::all();
             
             $one_star_statistics = platewaste_statistics($one_star_hotel);
             $two_star_statistics = platewaste_statistics($two_star_hotel);
@@ -497,6 +516,7 @@ class BenchmarkController extends Controller
             //style benchamrk statistics
             $leisure_hotel_statistics = platewaste_statistics($leisure_hotel);
             $business_hotel_statistics = platewaste_statistics($business_hotel);
+            
             
             
             //final benchmark dataset
@@ -526,8 +546,12 @@ class BenchmarkController extends Controller
                 'leisure'=>benchamrk_dataset($user, $leisure_hotel_statistics),
                 'business'=>benchamrk_dataset($user, $business_hotel_statistics)
             ]);
+            //all hotel
+            $all_hotel = Hotel::all();
+            //all hotel benchmark
+            $all_hotel_statistics = platewaste_statistics($all_hotel);
+            $all_benchmark = collect(['all'=>benchamrk_dataset($user, $all_hotel_statistics)]);
             
-            
-            return view('pages.Benchmark', compact('user','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
+            return view('pages.Benchmark', compact('user','all_benchmark','star_benchmark','room_benchmark','country_benchmark','type_benchmark'));
         }
 }

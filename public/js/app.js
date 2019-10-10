@@ -82689,9 +82689,9 @@ if (document.getElementById('benchmark-bar-canvas')) {
     data: {
       labels: ["H1", "H2", "H3", "H4", "H5"],
       datasets: [{
-        label: "Population (millions)",
+        label: "Your Waste",
         //	          backgroundColor: ["#62f31a", "#18f11e","#15ef6a","#13edb7","#11d2eb","#0f81e9","#0c30e7","#360ae6","#8308e4","#d006e2","#e004a2","#de0250","#dc0100"],
-        backgroundColor: ['rgba(98, 243, 26, 0.5)', 'rgba(24, 241, 30, 0.5)', 'rgba(21, 239, 106, 0.5)', 'rgba(19, 237, 183, 0.5)', 'rgba(17, 210, 235, 0.5)', 'rgba(15, 129, 233, 0.5)', 'rgba(12, 48, 231, 0.5)', 'rgba(54, 10, 230, 0.5)', 'rgba(131, 8, 228, 0.5)', 'rgba(208, 6, 226, 0.5)', 'rgba(224, 4, 162, 0.5)', 'rgba(222, 2, 8, 0.5)', 'rgba(220, 1, 0, 0.5)'],
+        backgroundColor: ['rgba(0, 0, 0, 0.7)', 'rgba(0, 0, 0, 0.7)', 'rgba(21, 239, 106, 0.5)', 'rgba(19, 237, 183, 0.5)', 'rgba(17, 210, 235, 0.5)', 'rgba(15, 129, 233, 0.5)', 'rgba(12, 48, 231, 0.5)', 'rgba(54, 10, 230, 0.5)', 'rgba(131, 8, 228, 0.5)', 'rgba(208, 6, 226, 0.5)', 'rgba(224, 4, 162, 0.5)', 'rgba(222, 2, 8, 0.5)', 'rgba(220, 1, 0, 0.5)'],
         borderColor: [],
         borderWidth: 1,
         data: [2478, 5267, 734, 784, 433]
