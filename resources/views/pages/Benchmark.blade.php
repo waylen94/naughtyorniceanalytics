@@ -87,37 +87,21 @@
            </div>
            
                  <!-- precise plate -->
-      <div class="col-lg-3 col-md-3 hidden-sm hidden-xs author-info">
-      <div class="card">
-              	<div class="row text-center">
-                <div class="col">
-                    <h1>Having problems in inplementing improvements</h1>
-                    <p> Feel free to leave us a message and get help. We will be providing you professional environmental solutions:)</p>
-                    <p>Our feedback will be directly sent to your Email Address</p>
-                </div>
-            </div>
-      
-         </div>
-      </div>
+                 @include('benchmark.precise_performance')
    </div>
         
               
    	<!-- Additional -->           
-   	<div class = "row">
-                
+   	<div class = "row">              
     </div>
-    
-    
-
 </div>
 @stop
 
 @section("diagram_js_script")
 	<script>
 		var json_data_benchmark_date = ['08-May', '09-May', '10-May','11-May', '12-May','13-May', '14-May'];
-		console.log(json_data_benchmark_date);
+// 		console.log(json_data_benchmark_date);
 		chartChange({{$all_benchmark['all']}});
-		
  	</script>
 @stop
 

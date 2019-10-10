@@ -258,6 +258,13 @@ window.chartChange =function chartChange(benchmark_list){
 		
 		benchmark_bar_chart.update();
 //		benchmark_bar_chart.data.datasets[0].backgroundColor[index] = record_origin_color;
+		
+		
+		precise_data.your = benchmark_list[index];
+		precise_data.max = benchmark_list[benchmark_list.length-1];
+		precise_data.min = benchmark_list[0];
+		
+		render_precise_panel(precise_data);
 		}
 	
 	function list_plus(list){
@@ -392,4 +399,36 @@ if(document.getElementById('benchmark-benchmark-canvas')){
 //			}
 //		}
 //	});
+
+
+var precise_data = {
+		type:'Daily report',
+		your: 35,
+		max : 75,
+		min : 20,
+	  	get report_type(){
+	    return this.type;
+	  },
+		get yourwaste(){
+		  return this.your + " kg";
+	  },
+		get maximum(){
+		  return this.max + " kg";
+	  },
+		get minimum(){
+		  return this.min + " kg";
+	  },
+
+};
+
+
+function render_precise_panel(precise_data){
+
+//document.getElementById("precise_panel_h1").innerHTML = precise_data.report_type;
+document.getElementById("precise_panel_yourwaste").innerHTML = precise_data.yourwaste;
+document.getElementById("precise_panel_max").innerHTML = precise_data.maximum;
+document.getElementById("precise_panel_min").innerHTML = precise_data.minimum;
+};
+
+
 		
