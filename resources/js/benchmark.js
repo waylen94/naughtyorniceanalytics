@@ -263,6 +263,7 @@ window.chartChange =function chartChange(benchmark_list){
 		precise_data.your = benchmark_list[index];
 		precise_data.max = benchmark_list[benchmark_list.length-1];
 		precise_data.min = benchmark_list[0];
+		precise_data.avg = average;
 		
 		render_precise_panel(precise_data);
 		}
@@ -404,6 +405,7 @@ if(document.getElementById('benchmark-benchmark-canvas')){
 var precise_data = {
 		type:'Daily report',
 		your: 35,
+		avg: 30,
 		max : 75,
 		min : 20,
 	  	get report_type(){
@@ -418,6 +420,9 @@ var precise_data = {
 		get minimum(){
 		  return this.min + " kg";
 	  },
+	  	get average(){
+		  return this.avg + " kg";
+	  },
 
 };
 
@@ -426,6 +431,7 @@ function render_precise_panel(precise_data){
 
 //document.getElementById("precise_panel_h1").innerHTML = precise_data.report_type;
 document.getElementById("precise_panel_yourwaste").innerHTML = precise_data.yourwaste;
+document.getElementById("precise_panel_avg").innerHTML = precise_data.average;
 document.getElementById("precise_panel_max").innerHTML = precise_data.maximum;
 document.getElementById("precise_panel_min").innerHTML = precise_data.minimum;
 };

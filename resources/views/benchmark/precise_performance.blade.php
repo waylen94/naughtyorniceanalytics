@@ -7,6 +7,9 @@
                     <h3> Your Waste</h3>
                     <p id="precise_panel_yourwaste"> <b>33 </b> kg </p>
                     
+                    <h3> Average Waste</h3>
+                    <p id="precise_panel_avg"> <b>60 </b> kg </p>
+                    
                     <h3> Maximum Waste</h3>
                     <p id="precise_panel_max"> <b>60 </b> kg </p>
                     
