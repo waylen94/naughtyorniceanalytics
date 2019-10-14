@@ -13,6 +13,7 @@
 // homepage
 Route::get('/', 'PagesController@show')->name('homepage');//dashboard
 Route::get('/dashboard/{user}', 'PagesController@dashboard')->name('dashboard');//dashboard
+
 Route::get('/account/{user}', 'PagesController@account')->name('account');//account
 Route::get('/analytics/{user}', 'PagesController@analytics')->name('analytics');//analytics
 Route::get('/contact/{user}', 'PagesController@contact')->name('contact');//contact
@@ -26,6 +27,8 @@ Route::get('/benchmark/{user}/yearly', 'BenchmarkController@yearlybenchmark')->n
 
 
 Route::get('testingtable', 'TestingController@showTable')->name('testing.table'); //testing table
+
+
 
 // authentication routers
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
