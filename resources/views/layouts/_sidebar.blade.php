@@ -35,9 +35,9 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Benchmark Components:</h6>
             <a class="collapse-item" href="{{route('benchmark.daily', Auth::id())}}">Daily Benchmark</a>
-            <a class="collapse-item" href="{{route('benchmark.weekly', Auth::id())}}">Weekly Benchamrk</a>
-            <a class="collapse-item" href="{{route('benchmark.monthly', Auth::id())}}">Monthly Benchamrk</a>
-            <a class="collapse-item" href="{{route('benchmark.yearly', Auth::id())}}">Yearly Benchamrk</a>
+            <a class="collapse-item" href="{{route('benchmark.weekly', Auth::id())}}">Weekly Benchmark</a>
+            <a class="collapse-item" href="{{route('benchmark.monthly', Auth::id())}}">Monthly Benchmark</a>
+            <a class="collapse-item" href="{{route('benchmark.yearly', Auth::id())}}">Yearly Benchmark</a>
             
           </div>
         </div>
