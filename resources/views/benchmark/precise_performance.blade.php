@@ -3,7 +3,7 @@
               	<div class="row text-center">
                 <div class="col">
                 <div class = "container">
-                    <h1 id="precise_panel_h1 p-3">Brief Report</h1>
+                    <h1 id="precise_panel_h1 p-3">Summary</h1>
                     </div>
                     <div class = "container">
                     <h3> Your Waste</h3>
