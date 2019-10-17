@@ -2,7 +2,8 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary mb-1">@switch($i)
+                      <div class="text-xs font-weight-bold text-primary mb-1">
+                      @switch($i)
                                                                                 @case(1)
                                                                                     Total Plate Waste for Seven Days
                                                                                     @break

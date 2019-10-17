@@ -1,7 +1,7 @@
 <!-- Topbar -->
 <div class="container header-head">
 	<div class = "row">
-	<div class = "col-4">
+	<div class = "col-5">
 	<h1>@yield('header', 'Naughty or Nice')</h1>
 	</div>
 	<div class = "col-6">

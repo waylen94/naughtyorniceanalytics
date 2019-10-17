@@ -1,9 +1,25 @@
 @extends('layouts.app')
 @section('title', 'Benchmark')
 
-@section('header', 'Benchmark By')
 
 @section('content')
+
+@switch(Route::currentRouteName())
+                                                                                @case('benchmark.daily')
+                                                                                    @section('header', 'Daily Benchmark')
+                                                                                    @break
+                                                                            
+                                                                                @case('benchmark.weekly')
+                                                                                    @section('header', 'Weekly Benchmark')
+                                                                                    @break
+                                                                            	@case('benchmark.monthly')
+                                                                            		@section('header', 'Monthly Benchmark')
+                                                                            		@break
+                                                                            	@case('benchmark.yearly')
+                                                                            		@section('header', 'Yearly Benchmark')
+                                                                            		@break	
+                                                                          
+                                                                            @endswitch
 <div class="container-fluid">
 
     <!-- Filtering with Benchmark -->
