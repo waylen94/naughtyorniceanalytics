@@ -5,7 +5,7 @@
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
-// Admin::routes();
+Admin::routes();
 
 Route::group([
     'prefix'        => config('admin.route.prefix'),
