@@ -2,6 +2,7 @@
 
 
 
+use Encore\Admin\Admin;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
