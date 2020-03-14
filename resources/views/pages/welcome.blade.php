@@ -26,7 +26,7 @@
                                 <div class="homepage-btn">
                                     <a href="{{ route('login') }}" class="btn btn-primary first">Get Started</a>
                                     <a href="{{ route('register') }}" class="btn btn-primary ">Activate Account</a>
-                                    <a href="{{ route('dashboard', Auth::loginUsingId(7)) }}" class="btn btn-dark">Visitor Model</a>
+                                  
                                 </div>
                                 @endauth
                             </div>  

@@ -9,7 +9,7 @@ class Links
         
 
 <li>
-    <a href="http://naughtyorniceanalytics.herokuapp.com/dashboard/1">
+    <a href="http://naughtyorniceanalytics.herokuapp.com/">
       <i class="fa fa-flag-o"></i>
       <span class="label label-danger"></span>
     </a>

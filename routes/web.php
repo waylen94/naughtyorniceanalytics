@@ -11,7 +11,7 @@
 |
 */
 // homepage
-Route::get('/', 'PagesController@show')->name('homepage');//dashboard
+Route::get('/', 'PagesController@show')->name('homepage');//entry web for (login; signup; visitor mode)
 Route::get('/dashboard/{user}', 'PagesController@dashboard')->name('dashboard');//dashboard
 
 Route::get('/account/{user}', 'PagesController@account')->name('account');//account
