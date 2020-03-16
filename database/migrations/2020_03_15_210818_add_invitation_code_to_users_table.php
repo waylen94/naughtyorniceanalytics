@@ -14,7 +14,7 @@ class AddInvitationCodeToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string("invitation_code");
+            $table->string("invitation_code")->nullable();;
         });
     }
 

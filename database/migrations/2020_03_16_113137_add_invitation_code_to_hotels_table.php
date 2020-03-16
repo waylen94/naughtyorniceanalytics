@@ -14,7 +14,7 @@ class AddInvitationCodeToHotelsTable extends Migration
     public function up()
     {
         Schema::table('hotels', function (Blueprint $table) {
-            $table->string("invitation_code");
+            $table->string("invitation_code")->nullable();
         });
     }
 
