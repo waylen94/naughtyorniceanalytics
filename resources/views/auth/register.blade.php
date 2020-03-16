@@ -61,7 +61,25 @@
                             </div>
                         </div>
                         
-                <div class="form-group row">
+            <!--invitation code registration-->            
+            <div class="form-group row">
+              <label for="invitation_code" class="col-md-4 col-form-label text-md-right">Invitation Code</label>
+
+              <div class="col-md-6">
+                <input id="invitation_code" class="form-control{{ $errors->has('invitation_code') ? ' is-invalid' : '' }}" name="invitation_code" required>
+
+                <!-- <img class="thumbnail captcha mt-3 mb-2" src="{{ captcha_src('flat') }}" onclick="this.src='/captcha/flat?'+Math.random()" title="Click to obtain new captcha"> -->
+
+                @if ($errors->has('invitation_code'))
+                  <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('invitation_code') }}</strong>
+                  </span>
+                @endif
+              </div>
+            </div>
+
+                        
+            <div class="form-group row">
               <label for="captcha" class="col-md-4 col-form-label text-md-right">Captcha</label>
 
               <div class="col-md-6">
@@ -76,6 +94,8 @@
                 @endif
               </div>
             </div>
+
+
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

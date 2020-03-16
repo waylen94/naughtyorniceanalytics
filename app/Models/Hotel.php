@@ -4,7 +4,7 @@ namespace App\Models;
 
 class Hotel extends Model
 {
-    protected $fillable = ['name', 'star', 'room_number', 'description', 'location'];
+    protected $fillable = ['name', 'star', 'room_number', 'description', 'location','invitation_code'];
     
     
     public function user()

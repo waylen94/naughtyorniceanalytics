@@ -32,7 +32,15 @@ class HotelsController extends Controller
 
 	public function store(HotelRequest $request)
 	{
+		do {
+			//generate a random string using Laravel's str_random helper
+			$token = str_random();
+		} //check if the token already exists and if it does, try again
+		while (Hotel::where('invitation_code', $token)->first());
+
+		$hotel->invitation_code = $token;
 		$hotel = Hotel::create($request->all());
+	
 		return redirect()->route('hotels.show', $hotel->id)->with('message', 'Created successfully.');
 	}
 
@@ -57,4 +65,6 @@ class HotelsController extends Controller
 
 		return redirect()->route('hotels.index')->with('message', 'Deleted successfully.');
 	}
+
+
 }

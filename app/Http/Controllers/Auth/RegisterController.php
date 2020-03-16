@@ -53,6 +53,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'captcha' => ['required', 'captcha'],
+            'invitation_code' => ['required', 'string', 'max:255'],
         ],
             [
                 'captcha.required' => 'Captcha can not be empty',
@@ -72,6 +73,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'invitation_code' => $data['invitation_code'],
         ]);
     }
 }

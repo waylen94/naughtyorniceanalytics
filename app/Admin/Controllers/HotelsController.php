@@ -37,6 +37,7 @@ class HotelsController extends AdminController
         $grid->column('updated_at', __('Updated at'));
         $grid->column('country', __('Country'));
         $grid->column('style', __('Style'));
+        $grid->column('invitation_code', __('Invitation_Code'));
 
         return $grid;
     }
@@ -62,6 +63,7 @@ class HotelsController extends AdminController
         $show->field('updated_at', __('Updated at'));
         $show->field('country', __('Country'));
         $show->field('style', __('Style'));
+        $show->field('invitation_code', __('Invitation_Code'));
 
         return $show;
     }
@@ -73,6 +75,12 @@ class HotelsController extends AdminController
      */
     protected function form()
     {
+        do {
+			//generate a random string using Laravel's str_random helper
+			$token = str_random();
+		} //check if the token already exists and if it does, try again
+		while (Hotel::where('invitation_code', $token)->first());
+
         $form = new Form(new Hotel);
 
         $form->text('name', __('Name'));
@@ -83,6 +91,7 @@ class HotelsController extends AdminController
         $form->number('user_id', __('User id'));
         $form->text('country', __('Country'));
         $form->text('style', __('Style'));
+        $form->text('invitation_code', __('Invitation_Code'))->value($token);
 
         return $form;
     }
